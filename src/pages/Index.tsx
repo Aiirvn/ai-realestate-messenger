@@ -17,8 +17,8 @@ const Index = () => {
       <Hero />
       <WhatsAppDemo />
       <HowItWorks />
-      <Demo />
       <Features />
+      <Demo />
       <Testimonials />
       <CTA />
       <Footer />

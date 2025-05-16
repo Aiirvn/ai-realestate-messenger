@@ -22,8 +22,9 @@ type MessageType = {
 
 const WhatsAppDemo: React.FC = () => {
   const [messages, setMessages] = useState<MessageType[]>([]);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('Find me a 2 bed in Miami under $500K');
   const [isTyping, setIsTyping] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
@@ -37,7 +38,7 @@ const WhatsAppDemo: React.FC = () => {
     const initialMessages: MessageType[] = [
       {
         id: 1,
-        text: 'Hi there! I can help you find investment properties. Try sending me a message like "Find me a 2 bed in Miami under $500K"',
+        text: 'Hi there! I can help you find investment properties. Click the send button to search for "2 bed in Miami under $500K" 👇',
         sender: 'bot',
         timestamp: getCurrentTime()
       }
@@ -59,7 +60,7 @@ const WhatsAppDemo: React.FC = () => {
 
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
-    if (inputValue.trim() === '') return;
+    if (inputValue.trim() === '' || messageSent) return;
 
     // Add user message
     const userMessage: MessageType = {
@@ -70,65 +71,50 @@ const WhatsAppDemo: React.FC = () => {
     };
     
     setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
+    setMessageSent(true);
     
     // Show typing indicator
     setIsTyping(true);
     
-    // Simulate bot response based on user input
+    // Simulate bot response
     setTimeout(() => {
       setIsTyping(false);
       
-      let botResponse: MessageType;
-      
-      // Check for property search patterns
-      if (inputValue.toLowerCase().includes('miami') && 
-          (inputValue.toLowerCase().includes('bed') || inputValue.toLowerCase().includes('bath')) && 
-          inputValue.toLowerCase().includes('$')) {
-        
-        botResponse = {
-          id: messages.length + 2,
-          text: "I found 8 properties in Miami that match your criteria! Here are the top 3 with our proprietary investment metrics 👇",
-          sender: 'bot',
-          timestamp: getCurrentTime(),
-          properties: [
-            {
-              id: 1,
-              image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80',
-              price: '$485,000',
-              location: 'Brickell, Miami',
-              beds: 2,
-              baths: 2,
-              capRate: '8.2%'
-            },
-            {
-              id: 2,
-              image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-              price: '$472,000',
-              location: 'Downtown Miami',
-              beds: 2,
-              baths: 2,
-              capRate: '7.8%'
-            },
-            {
-              id: 3,
-              image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-              price: '$499,000',
-              location: 'Wynwood, Miami',
-              beds: 2,
-              baths: 2.5,
-              capRate: '7.5%'
-            }
-          ]
-        };
-      } else {
-        botResponse = {
-          id: messages.length + 2,
-          text: "I can help you find investment-ready properties! Try asking something like 'Find me a 2 bed in Miami under $500K with positive cash flow'",
-          sender: 'bot',
-          timestamp: getCurrentTime()
-        };
-      }
+      const botResponse: MessageType = {
+        id: messages.length + 2,
+        text: "I found 8 properties in Miami that match your criteria! Here are the top 3 with our proprietary investment metrics 👇",
+        sender: 'bot',
+        timestamp: getCurrentTime(),
+        properties: [
+          {
+            id: 1,
+            image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80',
+            price: '$485,000',
+            location: 'Brickell, Miami',
+            beds: 2,
+            baths: 2,
+            capRate: '8.2%'
+          },
+          {
+            id: 2,
+            image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+            price: '$472,000',
+            location: 'Downtown Miami',
+            beds: 2,
+            baths: 2,
+            capRate: '7.8%'
+          },
+          {
+            id: 3,
+            image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+            price: '$499,000',
+            location: 'Wynwood, Miami',
+            beds: 2,
+            baths: 2.5,
+            capRate: '7.5%'
+          }
+        ]
+      };
       
       setMessages(prev => [...prev, botResponse]);
     }, 1500);
@@ -227,20 +213,29 @@ const WhatsAppDemo: React.FC = () => {
             </div>
             
             {/* Input area */}
-            <form onSubmit={handleSend} className="p-3 bg-white flex items-center gap-2">
+            <form onSubmit={handleSend} className="p-3 bg-white flex items-center gap-2 relative">
               <Input
                 placeholder="Type your property search..."
                 value={inputValue}
                 onChange={handleInputChange}
                 className="flex-1 rounded-full bg-gray-50 border-gray-200 focus:border-propwiz-green"
+                readOnly={messageSent}
               />
               <Button 
                 type="submit" 
                 size="icon" 
-                className="bg-propwiz-green text-white rounded-full hover:bg-propwiz-green/90"
+                className={`bg-propwiz-green text-white rounded-full hover:bg-propwiz-green/90 ${!messageSent ? 'animate-pulse' : ''}`}
+                disabled={messageSent}
               >
                 <Send size={18} />
               </Button>
+              
+              {!messageSent && (
+                <div className="absolute -top-10 right-3 bg-black text-white text-xs px-3 py-1.5 rounded-lg shadow-lg">
+                  Click send to search for properties 👇
+                  <div className="absolute -bottom-1 right-5 h-3 w-3 bg-black rotate-45"></div>
+                </div>
+              )}
             </form>
             
             <div className="bg-white px-4 py-2 border-t border-gray-100">
