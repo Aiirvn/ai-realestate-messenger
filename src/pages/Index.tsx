@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import WhatsAppDemo from '@/components/WhatsAppDemo';
 import HowItWorks from '@/components/HowItWorks';
 import Demo from '@/components/Demo';
 import Features from '@/components/Features';
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="font-inter">
       <Navbar />
       <Hero />
+      <WhatsAppDemo />
       <HowItWorks />
       <Demo />
       <Features />
@@ -25,4 +27,3 @@ const Index = () => {
 };
 
 export default Index;
-
