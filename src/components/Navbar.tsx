@@ -1,7 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, Wand2 } from "lucide-react";
+
+const PropWizLogo = () => {
+  return (
+    <div className="flex items-center">
+      <div className="relative h-8 w-8">
+        <Wand2 className="h-8 w-8 text-propwiz-green transform rotate-12 absolute" />
+        <Home className="h-4 w-4 text-propwiz-dark absolute top-0 right-0" />
+      </div>
+      <span className="ml-2 font-bold text-xl text-propwiz-dark">PropWiz<span className="text-propwiz-green">.ai</span></span>
+    </div>
+  );
+};
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,16 +39,7 @@ const Navbar: React.FC = () => {
       isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <img 
-            src="/lovable-uploads/42265438-8a38-4517-b267-5a935ec12eca.png" 
-            alt="Propwiz.ai Logo" 
-            className="h-10 mr-2"
-          />
-          <div className="hidden sm:flex ml-2 bg-propwiz-green/10 px-2 py-1 rounded-md">
-            <span className="text-xs text-propwiz-green font-medium">BETA</span>
-          </div>
-        </div>
+        <PropWizLogo />
         
         <div className="hidden md:flex space-x-8">
           <a href="#how-it-works" className="text-propwiz-dark hover:text-propwiz-green font-medium transition flex items-center space-x-1 group">
