@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare, Send } from 'lucide-react';
 import { Input } from "@/components/ui/input";
@@ -121,11 +120,7 @@ const WhatsAppDemo: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-16 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-10 right-0 w-64 h-64 bg-propwiz-green/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-0 w-80 h-80 bg-propwiz-green/10 rounded-full blur-3xl"></div>
-      
+    <div className="py-16 relative overflow-hidden bg-gradient-to-br from-propwiz-light to-white">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-lg mx-auto">
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">

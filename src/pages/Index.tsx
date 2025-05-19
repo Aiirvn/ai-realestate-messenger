@@ -8,7 +8,6 @@ import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
-import EnhancedDemo from '@/components/EnhancedDemo';
 
 const Index = () => {
   return (
@@ -24,7 +23,6 @@ const Index = () => {
       </div>
       <HowItWorks />
       <Features />
-      <EnhancedDemo />
       <Testimonials />
       <CTA />
       <Footer />
