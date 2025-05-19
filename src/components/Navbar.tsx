@@ -1,14 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, Wand2 } from "lucide-react";
+import { Menu, X, Wand2, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PropWizLogo = () => {
   return (
     <div className="flex items-center">
       <div className="relative h-8 w-8">
-        <Wand2 className="h-8 w-8 text-propwiz-green transform rotate-12 absolute" />
-        <Home className="h-4 w-4 text-propwiz-green absolute top-0 right-0" />
+        <Wand2 className="h-8 w-8 text-propwiz-green transform rotate-12" />
+        <Home className="h-4 w-4 text-propwiz-green absolute bottom-0 left-2" />
       </div>
       <span className="ml-2 font-bold text-xl text-propwiz-dark">PropWiz<span className="text-propwiz-green">.ai</span></span>
     </div>
@@ -39,7 +40,9 @@ const Navbar: React.FC = () => {
       isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <PropWizLogo />
+        <Link to="/">
+          <PropWizLogo />
+        </Link>
         
         <div className="hidden md:flex space-x-8">
           <a href="#how-it-works" className="text-propwiz-dark hover:text-propwiz-green font-medium transition flex items-center space-x-1 group">
@@ -57,10 +60,12 @@ const Navbar: React.FC = () => {
         </div>
         
         <div className="flex items-center">
-          <Button className="bg-propwiz-green hover:bg-opacity-90 rounded-full px-6 text-white relative overflow-hidden group">
-            <span className="relative z-10">Start Free Beta</span>
-            <span className="absolute inset-0 w-full h-0 bg-white/20 group-hover:h-full transition-all duration-300"></span>
-          </Button>
+          <Link to="/signup">
+            <Button className="bg-propwiz-green hover:bg-opacity-90 rounded-full px-6 text-white relative overflow-hidden group">
+              <span className="relative z-10">Start Free Beta</span>
+              <span className="absolute inset-0 w-full h-0 bg-white/20 group-hover:h-full transition-all duration-300"></span>
+            </Button>
+          </Link>
           
           <button 
             className="ml-4 p-2 rounded-full bg-gray-100 md:hidden"
@@ -101,6 +106,13 @@ const Navbar: React.FC = () => {
           >
             Testimonials
           </a>
+          <Link
+            to="/signup"
+            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-light rounded-lg"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Sign Up
+          </Link>
         </div>
       </div>
     </nav>

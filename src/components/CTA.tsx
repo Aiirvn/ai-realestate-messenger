@@ -1,29 +1,9 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
+import { Link } from "react-router-dom";
 
 const CTA: React.FC = () => {
-  const [phone, setPhone] = useState('');
-  const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Thanks for joining our beta!",
-        description: "We'll send you a WhatsApp message to get started soon.",
-      });
-      setLoading(false);
-      setPhone('');
-    }, 1000);
-  };
-  
   return (
     <section className="py-20 bg-propwiz-green/10">
       <div className="container px-4 mx-auto">
@@ -35,30 +15,18 @@ const CTA: React.FC = () => {
             Join our free beta program and start using Propwiz.ai on WhatsApp instantly
           </p>
           
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <div className="flex-grow">
-                <Input
-                  type="tel"
-                  placeholder="Enter your phone number"
-                  className="h-12 rounded-full px-6"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                />
-              </div>
+          <div className="max-w-md mx-auto">
+            <Link to="/signup">
               <Button 
-                type="submit" 
-                className="bg-propwiz-green hover:bg-opacity-90 rounded-full h-12 px-8 text-white"
-                disabled={loading}
+                className="w-full sm:w-auto bg-propwiz-green hover:bg-opacity-90 rounded-full h-12 px-8 text-white"
               >
-                {loading ? "Sending..." : "Start Free Beta"}
+                Join the Waitlist
               </Button>
-            </div>
+            </Link>
             <p className="text-xs text-gray-500 mt-3">
               By signing up, you agree to receive WhatsApp messages from Propwiz.ai
             </p>
-          </form>
+          </div>
           
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8">
             <div className="flex items-center">
@@ -85,4 +53,3 @@ const CTA: React.FC = () => {
 };
 
 export default CTA;
-

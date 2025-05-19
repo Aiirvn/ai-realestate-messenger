@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   return (
@@ -21,10 +22,12 @@ const Hero: React.FC = () => {
           Simply send a WhatsApp message like "Find me a 2 bed in Miami under $500K" and get instant results with proprietary investment metrics.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button className="bg-propwiz-green hover:bg-opacity-90 rounded-full px-8 py-6 text-white flex items-center text-lg shadow-lg shadow-propwiz-green/20 hover:shadow-propwiz-green/30 transition-all">
-            <MessageSquare className="mr-2 h-5 w-5" />
-            Start on WhatsApp
-          </Button>
+          <Link to="/signup">
+            <Button className="bg-propwiz-green hover:bg-opacity-90 rounded-full px-8 py-6 text-white flex items-center text-lg shadow-lg shadow-propwiz-green/20 hover:shadow-propwiz-green/30 transition-all">
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Start on WhatsApp
+            </Button>
+          </Link>
         </div>
         <div className="mt-8 flex items-center space-x-4">
           <div className="flex -space-x-2">
