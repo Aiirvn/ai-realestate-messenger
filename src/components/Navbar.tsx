@@ -9,7 +9,7 @@ const PropWizLogo = () => {
     <div className="flex items-center">
       <div className="relative h-8 w-8">
         <Wand2 className="h-8 w-8 text-propwiz-green transform rotate-12" />
-        <Home className="h-3 w-3 text-propwiz-green absolute top-0 right-0" />
+        <Home className="h-2.5 w-2.5 text-propwiz-green absolute -top-0.5 right-1" />
       </div>
       <span className="ml-2 font-bold text-xl text-propwiz-dark">PropWiz<span className="text-propwiz-green">.ai</span></span>
     </div>

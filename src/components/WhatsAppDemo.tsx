@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare, Send } from 'lucide-react';
 import { Input } from "@/components/ui/input";
@@ -27,9 +28,15 @@ const WhatsAppDemo: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll to the bottom when messages change
+  // Auto-scroll to the bottom when messages change - only within the chat container
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatContainerRef.current && messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'end',
+        inline: 'nearest'
+      });
+    }
   }, [messages]);
 
   // Initial messages
@@ -59,6 +66,7 @@ const WhatsAppDemo: React.FC = () => {
 
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     if (inputValue.trim() === '' || messageSent) return;
 
     // Add user message
@@ -138,7 +146,7 @@ const WhatsAppDemo: React.FC = () => {
             {/* Chat area */}
             <div 
               ref={chatContainerRef} 
-              className="p-4 h-96 overflow-y-auto bg-[#E5DDD5] bg-opacity-30 space-y-4"
+              className="p-4 h-96 overflow-y-auto bg-[#E5DDD5] bg-opacity-30 space-y-4 scroll-smooth"
             >
               {messages.map(message => (
                 <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
