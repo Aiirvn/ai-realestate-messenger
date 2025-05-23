@@ -1,15 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Wand2, Home } from "lucide-react";
+import { Menu, X, Search, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const PropWizLogo = () => {
   return (
     <div className="flex items-center">
       <div className="relative h-8 w-8">
-        <Wand2 className="h-8 w-8 text-propwiz-green transform rotate-12" />
-        <Home className="h-2.5 w-2.5 text-propwiz-green absolute -top-0.5 right-1" />
+        {/* Magnifying glass circle */}
+        <div className="absolute inset-0 w-6 h-6 rounded-full bg-propwiz-green flex items-center justify-center">
+          {/* House inside the circle */}
+          <Home className="h-3 w-3 text-white" />
+        </div>
+        {/* Magnifying glass handle */}
+        <div className="absolute bottom-0 right-0 w-3 h-3 bg-propwiz-green transform rotate-45 origin-top-left rounded-sm"></div>
       </div>
       <span className="ml-2 font-bold text-xl text-propwiz-dark">PropWiz<span className="text-propwiz-green">.ai</span></span>
     </div>

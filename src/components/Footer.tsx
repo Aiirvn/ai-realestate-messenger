@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Wand2, Home } from "lucide-react";
+import { Search, Home } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -13,8 +13,13 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
               <div className="relative h-8 w-8">
-                <Wand2 className="h-8 w-8 text-propwiz-green transform rotate-12" />
-                <Home className="h-2.5 w-2.5 text-propwiz-green absolute -top-0.5 right-1" />
+                {/* Magnifying glass circle */}
+                <div className="absolute inset-0 w-6 h-6 rounded-full bg-propwiz-green flex items-center justify-center">
+                  {/* House inside the circle */}
+                  <Home className="h-3 w-3 text-white" />
+                </div>
+                {/* Magnifying glass handle */}
+                <div className="absolute bottom-0 right-0 w-3 h-3 bg-propwiz-green transform rotate-45 origin-top-left rounded-sm"></div>
               </div>
               <span className="ml-2 font-bold text-xl text-propwiz-dark">PropWiz<span className="text-propwiz-green">.ai</span></span>
             </Link>
