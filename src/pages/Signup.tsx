@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Wand2, Home, ArrowLeft } from "lucide-react";
+import { Building2, TrendingUp, ArrowLeft } from "lucide-react";
 
 const Signup: React.FC = () => {
   const [firstName, setFirstName] = useState('');
@@ -51,12 +50,16 @@ const Signup: React.FC = () => {
               <div className="max-w-2xl mx-auto mb-10">
                 <div className="flex justify-center mb-8">
                   <div className="relative h-12 w-12">
-                    <Wand2 className="h-12 w-12 text-propwiz-green transform rotate-12" />
-                    <Home className="h-6 w-6 text-propwiz-green absolute bottom-0 left-3" />
+                    <div className="absolute inset-0 w-10 h-10 bg-propwiz-green rounded-sm flex items-center justify-center">
+                      <Building2 className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-propwiz-green rounded-full flex items-center justify-center">
+                      <TrendingUp className="h-4 w-4 text-white" />
+                    </div>
                   </div>
                 </div>
-                <h1 className="text-3xl md:text-4xl font-bold text-center text-propwiz-dark mb-4">Join the PropWiz Beta</h1>
-                <p className="text-gray-600 text-center">Be among the first to use our AI-powered real estate search platform</p>
+                <h1 className="text-3xl md:text-4xl font-bold text-center text-propwiz-dark mb-4">Join the REDealr Beta</h1>
+                <p className="text-gray-600 text-center">Be among the first to use our AI-powered real estate deal finder</p>
               </div>
               
               <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg">
@@ -152,7 +155,7 @@ const Signup: React.FC = () => {
               </div>
               <h2 className="text-2xl font-bold text-propwiz-dark mb-4">Thank You!</h2>
               <p className="text-gray-600 mb-6">
-                Your application to join the PropWiz.ai beta has been submitted. Our team is reviewing your information and will be in touch shortly with next steps.
+                Your application to join the REDealr beta has been submitted. Our team is reviewing your information and will be in touch shortly with next steps.
               </p>
               <Link to="/">
                 <Button className="bg-propwiz-green hover:bg-opacity-90 rounded-full text-white">

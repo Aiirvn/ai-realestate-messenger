@@ -1,22 +1,23 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Search, Home } from "lucide-react";
+import { Menu, X, Building2, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const PropWizLogo = () => {
+const REDealrLogo = () => {
   return (
     <div className="flex items-center">
       <div className="relative h-8 w-8">
-        {/* Magnifying glass circle */}
-        <div className="absolute inset-0 w-6 h-6 rounded-full bg-propwiz-green flex items-center justify-center">
-          {/* House inside the circle */}
-          <Home className="h-3 w-3 text-white" />
+        {/* Building with trending arrow */}
+        <div className="absolute inset-0 w-6 h-6 bg-propwiz-green rounded-sm flex items-center justify-center">
+          <Building2 className="h-3.5 w-3.5 text-white" />
         </div>
-        {/* Magnifying glass handle */}
-        <div className="absolute bottom-0 right-0 w-3 h-3 bg-propwiz-green transform rotate-45 origin-top-left rounded-sm"></div>
+        {/* Trending up arrow */}
+        <div className="absolute -top-1 -right-1 w-4 h-4 bg-propwiz-green rounded-full flex items-center justify-center">
+          <TrendingUp className="h-2.5 w-2.5 text-white" />
+        </div>
       </div>
-      <span className="ml-2 font-bold text-xl text-propwiz-dark">PropWiz<span className="text-propwiz-green">.ai</span></span>
+      <span className="ml-2 font-bold text-xl text-propwiz-dark">RE<span className="text-propwiz-green">Dealr</span></span>
     </div>
   );
 };
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/">
-          <PropWizLogo />
+          <REDealrLogo />
         </Link>
         
         <div className="hidden md:flex space-x-8">

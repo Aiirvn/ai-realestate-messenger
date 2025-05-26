@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, Send } from 'lucide-react';
+import { MessageSquare, Send, Building2, TrendingUp } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -44,7 +44,7 @@ const WhatsAppDemo: React.FC = () => {
     const initialMessages: MessageType[] = [
       {
         id: 1,
-        text: 'Hi there! I can help you find investment properties. Click the send button to search for "2 bed in Miami under $500K" 👇',
+        text: 'Hi there! I can help you find investment deals. Click the send button to search for "2 bed in Miami under $500K" 👇',
         sender: 'bot',
         timestamp: getCurrentTime()
       }
@@ -89,7 +89,7 @@ const WhatsAppDemo: React.FC = () => {
       
       const botResponse: MessageType = {
         id: messages.length + 2,
-        text: "I found 8 properties in Miami that match your criteria! Here are the top 3 with our proprietary investment metrics 👇",
+        text: "I found 8 properties in Miami that match your criteria! Here are the top 3 with our comprehensive deal analysis 👇",
         sender: 'bot',
         timestamp: getCurrentTime(),
         properties: [
@@ -134,11 +134,16 @@ const WhatsAppDemo: React.FC = () => {
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
             {/* WhatsApp header */}
             <div className="bg-propwiz-light p-4 flex items-center border-b border-gray-100">
-              <div className="w-10 h-10 bg-propwiz-green rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold">P</span>
+              <div className="relative w-10 h-10 flex-shrink-0">
+                <div className="absolute inset-0 w-8 h-8 bg-propwiz-green rounded-sm flex items-center justify-center">
+                  <Building2 className="h-4 w-4 text-white" />
+                </div>
+                <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-propwiz-green rounded-full flex items-center justify-center">
+                  <TrendingUp className="h-2.5 w-2.5 text-white" />
+                </div>
               </div>
               <div className="ml-3">
-                <div className="font-medium text-propwiz-dark">Propwiz Assistant</div>
+                <div className="font-medium text-propwiz-dark">REDealr Assistant</div>
                 <div className="text-xs text-gray-500">Online</div>
               </div>
             </div>
@@ -250,7 +255,7 @@ const WhatsAppDemo: React.FC = () => {
           
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
-              Properties are automatically added to your Google Sheet for easy tracking
+              Deals are automatically added to your Google Sheet for easy tracking
             </p>
           </div>
         </div>

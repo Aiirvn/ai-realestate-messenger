@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Search, Home } from "lucide-react";
+import { Building2, TrendingUp } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -13,18 +12,19 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
               <div className="relative h-8 w-8">
-                {/* Magnifying glass circle */}
-                <div className="absolute inset-0 w-6 h-6 rounded-full bg-propwiz-green flex items-center justify-center">
-                  {/* House inside the circle */}
-                  <Home className="h-3 w-3 text-white" />
+                {/* Building with trending arrow */}
+                <div className="absolute inset-0 w-6 h-6 bg-propwiz-green rounded-sm flex items-center justify-center">
+                  <Building2 className="h-3.5 w-3.5 text-white" />
                 </div>
-                {/* Magnifying glass handle */}
-                <div className="absolute bottom-0 right-0 w-3 h-3 bg-propwiz-green transform rotate-45 origin-top-left rounded-sm"></div>
+                {/* Trending up arrow */}
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-propwiz-green rounded-full flex items-center justify-center">
+                  <TrendingUp className="h-2.5 w-2.5 text-white" />
+                </div>
               </div>
-              <span className="ml-2 font-bold text-xl text-propwiz-dark">PropWiz<span className="text-propwiz-green">.ai</span></span>
+              <span className="ml-2 font-bold text-xl text-propwiz-dark">RE<span className="text-propwiz-green">Dealr</span></span>
             </Link>
             <p className="text-gray-600 mt-4 max-w-xs">
-              AI-powered real estate search via WhatsApp, making property discovery easier than ever before.
+              AI-powered real estate deal finder via WhatsApp, making investment property discovery easier than ever before.
             </p>
           </div>
           
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="mt-8 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">© {currentYear} Propwiz.ai. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© {currentYear} REDealr. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <Link to="/signup" className="text-gray-500 hover:text-propwiz-green text-sm">Sign Up</Link>
           </div>

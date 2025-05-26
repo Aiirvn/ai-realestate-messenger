@@ -9,10 +9,10 @@ const CTA: React.FC = () => {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">
-            Start Finding Properties Today
+            Start Finding Deals Today
           </h2>
           <p className="text-lg mb-8 text-gray-700">
-            Join our free beta program and start using Propwiz.ai on WhatsApp instantly
+            Join our free beta program and start using REDealr on WhatsApp instantly
           </p>
           
           <div className="max-w-md mx-auto">
@@ -24,7 +24,7 @@ const CTA: React.FC = () => {
               </Button>
             </Link>
             <p className="text-xs text-gray-500 mt-3">
-              By signing up, you agree to receive WhatsApp messages from Propwiz.ai
+              By signing up, you agree to receive WhatsApp messages from REDealr
             </p>
           </div>
           

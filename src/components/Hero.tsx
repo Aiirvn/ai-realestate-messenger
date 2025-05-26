@@ -13,13 +13,13 @@ const Hero: React.FC = () => {
       
       <div>
         <div className="inline-block px-4 py-2 bg-propwiz-green/10 rounded-full text-propwiz-green font-medium text-sm mb-6">
-          AI-Powered Real Estate Intelligence
+          AI-Powered Real Estate Deal Intelligence
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-propwiz-dark leading-tight mb-6">
-          Find <span className="text-propwiz-green">Investment-Ready</span> Properties in Seconds
+          Find <span className="text-propwiz-green">Investment Deals</span> in Seconds
         </h1>
         <p className="text-lg mb-8 text-gray-700 max-w-lg">
-          Simply send a WhatsApp message like "Find me a 2 bed in Miami under $500K" and get instant results with proprietary investment metrics.
+          Simply send a WhatsApp message like "Find me a 2 bed in Miami under $500K" and get instant results with comprehensive deal analysis.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link to="/signup">
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
             <div className="w-8 h-8 rounded-full bg-gray-400 border-2 border-white"></div>
           </div>
           <p className="text-sm text-gray-600">
-            <span className="font-semibold">230+</span> real estate professionals trust PropWiz
+            <span className="font-semibold">230+</span> real estate investors trust REDealr
           </p>
         </div>
       </div>
