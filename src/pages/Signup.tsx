@@ -8,6 +8,13 @@ import { Textarea } from "@/components/ui/textarea";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Building2, TrendingUp, ArrowLeft } from "lucide-react";
+import { createClient } from '@supabase/supabase-js'; // Import Supabase client
+
+// Initialize Supabase client with your Project URL and Anon API key
+const supabase = createClient(
+  'https://eeeqlbvndjcwkxuvqukm.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVlZXFsYnZuZGpjd2t4dXZxdWttIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyODAwMjgsImV4cCI6MjA2Mzg1NjAyOH0.3Wf2tnWQlZiopTIy9XteOB-9YuH8oGWY_Ibd8eLeyeA'
+);
 
 const Signup: React.FC = () => {
   const [firstName, setFirstName] = useState('');
@@ -19,22 +26,52 @@ const Signup: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
-  
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
+
+    try {
+      const { data, error } = await supabase
+        .from('leads')
+        .insert([
+          {
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            phone_number: phone,
+            brokerage: brokerage || null,
+            relevant_links: links || null,
+          },
+        ]);
+
+      if (error) {
+        console.error('Error submitting lead:', error);
+        toast({
+          title: 'Submission Failed',
+          description: 'There was an error submitting your application. Please try again.',
+          variant: 'destructive',
+        });
+      } else {
+        console.log('Lead submitted:', data);
+        setSubmitted(true);
+        toast({
+          title: 'Application Submitted!',
+          description: 'We’re reviewing your application and will be in touch soon.',
+        });
+      }
+    } catch (err) {
+      console.error('Unexpected error:', err);
       toast({
-        title: "Application submitted!",
-        description: "We're reviewing your application and will be in touch soon.",
+        title: 'Unexpected Error',
+        description: 'An unexpected error occurred. Please try again later.',
+        variant: 'destructive',
       });
-    }, 1500);
+    } finally {
+      setLoading(false);
+    }
   };
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -69,6 +106,7 @@ const Signup: React.FC = () => {
                       <Label htmlFor="firstName">First Name *</Label>
                       <Input 
                         id="firstName" 
+                        name="firstName"
                         value={firstName}
                         onChange={(e) => setFirstName(e.target.value)}
                         required
@@ -79,6 +117,7 @@ const Signup: React.FC = () => {
                       <Label htmlFor="lastName">Last Name *</Label>
                       <Input 
                         id="lastName" 
+                        name="lastName"
                         value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
                         required
@@ -91,6 +130,7 @@ const Signup: React.FC = () => {
                     <Label htmlFor="email">Email *</Label>
                     <Input 
                       id="email" 
+                      name="email"
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -103,6 +143,7 @@ const Signup: React.FC = () => {
                     <Label htmlFor="phone">Phone Number *</Label>
                     <Input 
                       id="phone" 
+                      name="phone"
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
@@ -115,6 +156,7 @@ const Signup: React.FC = () => {
                     <Label htmlFor="brokerage">Brokerage (optional)</Label>
                     <Input 
                       id="brokerage" 
+                      name="brokerage"
                       value={brokerage}
                       onChange={(e) => setBrokerage(e.target.value)}
                       className="mt-1"
@@ -125,6 +167,7 @@ const Signup: React.FC = () => {
                     <Label htmlFor="links">Relevant Links (optional)</Label>
                     <Textarea 
                       id="links" 
+                      name="links"
                       value={links}
                       onChange={(e) => setLinks(e.target.value)}
                       placeholder="LinkedIn, website, etc."
