@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, Send, Building2, TrendingUp } from 'lucide-react';
+import { MessageSquare, Send, Home } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -18,6 +18,16 @@ type MessageType = {
     baths: number;
     capRate?: string;
   }>;
+};
+
+const REDealrLogo = () => {
+  return (
+    <div className="relative w-10 h-10 flex-shrink-0">
+      <div className="w-10 h-10 bg-propwiz-green rounded-lg flex items-center justify-center shadow-md">
+        <Home className="h-6 w-6 text-white" />
+      </div>
+    </div>
+  );
 };
 
 const WhatsAppDemo: React.FC = () => {
@@ -134,16 +144,11 @@ const WhatsAppDemo: React.FC = () => {
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
             {/* WhatsApp header */}
             <div className="bg-propwiz-light p-4 flex items-center border-b border-gray-100">
-              <div className="relative w-10 h-10 flex-shrink-0">
-                <div className="absolute inset-0 w-8 h-8 bg-propwiz-green rounded-sm flex items-center justify-center">
-                  <Building2 className="h-4 w-4 text-white" />
-                </div>
-                <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-propwiz-green rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-2.5 w-2.5 text-white" />
-                </div>
-              </div>
+              <REDealrLogo />
               <div className="ml-3">
-                <div className="font-medium text-propwiz-dark">REDealr Assistant</div>
+                <div className="font-medium text-propwiz-dark">
+                  RE<span className="text-propwiz-green">Dealr</span> Assistant
+                </div>
                 <div className="text-xs text-gray-500">Online</div>
               </div>
             </div>

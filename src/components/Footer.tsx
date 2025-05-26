@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Building2, TrendingUp } from "lucide-react";
+import { Home } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -11,15 +11,8 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
-              <div className="relative h-8 w-8">
-                {/* Building with trending arrow */}
-                <div className="absolute inset-0 w-6 h-6 bg-propwiz-green rounded-sm flex items-center justify-center">
-                  <Building2 className="h-3.5 w-3.5 text-white" />
-                </div>
-                {/* Trending up arrow */}
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-propwiz-green rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-2.5 w-2.5 text-white" />
-                </div>
+              <div className="w-8 h-8 bg-propwiz-green rounded-lg flex items-center justify-center shadow-md">
+                <Home className="h-5 w-5 text-white" />
               </div>
               <span className="ml-2 font-bold text-xl text-propwiz-dark">RE<span className="text-propwiz-green">Dealr</span></span>
             </Link>
