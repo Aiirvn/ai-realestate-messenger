@@ -6,7 +6,7 @@ import { MessageSquare, Shield, RotateCcw } from "lucide-react";
 
 const CTA: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-propwiz-green/10 to-propwiz-green/5">
+    <section className="py-20 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4 animate-fade-in">

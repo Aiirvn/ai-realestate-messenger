@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <div className="font-inter overflow-hidden">
       <Navbar />
-      <div className="bg-gradient-to-br from-propwiz-green/10 to-propwiz-green/5 overflow-hidden">
+      <div className="bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-center py-12">
             <Hero />

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare, Send, Home } from 'lucide-react';
 import { Input } from "@/components/ui/input";
@@ -138,12 +137,12 @@ const WhatsAppDemo: React.FC = () => {
   };
 
   return (
-    <div className="py-16 relative overflow-hidden bg-gradient-to-br from-propwiz-light to-white">
+    <div className="py-16 relative overflow-hidden bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-lg mx-auto">
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-            {/* WhatsApp header */}
-            <div className="bg-propwiz-light p-4 flex items-center border-b border-gray-100">
+            {/* WhatsApp header - standardized green */}
+            <div className="bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3 p-4 flex items-center border-b border-gray-100">
               <REDealrLogo />
               <div className="ml-3">
                 <div className="font-medium text-propwiz-dark">
@@ -156,14 +155,14 @@ const WhatsAppDemo: React.FC = () => {
             {/* Chat area */}
             <div 
               ref={chatContainerRef} 
-              className="p-4 h-96 overflow-y-auto bg-[#E5DDD5] bg-opacity-30 space-y-4 scroll-smooth"
+              className="p-4 h-96 overflow-y-auto bg-gray-50/50 space-y-4 scroll-smooth"
             >
               {messages.map(message => (
                 <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                   <div 
                     className={`max-w-[80%] rounded-2xl p-3 ${
                       message.sender === 'user' 
-                        ? 'bg-propwiz-light text-propwiz-dark rounded-tr-none' 
+                        ? 'bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3 text-propwiz-dark rounded-tr-none' 
                         : 'bg-white text-propwiz-dark rounded-tl-none border border-gray-100'
                     }`}
                   >

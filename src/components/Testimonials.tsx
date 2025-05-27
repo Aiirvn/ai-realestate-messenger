@@ -3,19 +3,19 @@ import React from 'react';
 
 const testimonials = [
   {
-    quote: "Propwiz helped me find my dream home within days. I just sent a WhatsApp message with what I wanted and got matched listings instantly!",
+    quote: "REDealr helped me find my dream investment property within days. I just sent a WhatsApp message with what I wanted and got matched listings instantly!",
     author: "Sarah Johnson",
-    role: "First-time Homebuyer",
+    role: "First-time Real Estate Investor",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80"
   },
   {
-    quote: "As an investor, I need to quickly find properties that match specific criteria. Propwiz saved me countless hours of searching.",
+    quote: "As a serious investor, I need to quickly find properties that match specific criteria. REDealr saved me countless hours of searching.",
     author: "Michael Chen",
     role: "Real Estate Investor",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80"
   },
   {
-    quote: "My clients love that I can create personalized property recommendations and showing routes for them in seconds.",
+    quote: "My clients love that I can create personalized property recommendations for them in seconds using REDealr.",
     author: "Jessica Rodriguez",
     role: "Real Estate Agent",
     avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80"
@@ -24,12 +24,12 @@ const testimonials = [
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-16 bg-propwiz-light">
+    <section id="testimonials" className="py-16 bg-propwiz-green/8">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">What Our Users Say</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Join the growing community of satisfied Propwiz users
+            Join the growing community of satisfied RE<span className="font-semibold text-propwiz-green">Dealr</span> users
           </p>
         </div>
         
@@ -37,7 +37,7 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl p-6 shadow-sm flex flex-col h-full"
+              className="bg-white rounded-xl p-6 shadow-sm flex flex-col h-full border border-gray-100 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex-grow">
                 <svg className="h-6 w-6 text-propwiz-green mb-4" fill="currentColor" viewBox="0 0 24 24">
@@ -63,4 +63,3 @@ const Testimonials: React.FC = () => {
 };
 
 export default Testimonials;
-

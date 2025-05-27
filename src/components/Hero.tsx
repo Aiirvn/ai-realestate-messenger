@@ -7,17 +7,12 @@ import { Link } from "react-router-dom";
 const Hero: React.FC = () => {
   return (
     <div className="py-8 lg:py-16 relative">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-propwiz-green/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 -mb-24 -ml-16 w-80 h-80 bg-propwiz-green/5 rounded-full blur-3xl"></div>
+      {/* Clean background gradients - no weird circles/squares */}
+      <div className="absolute inset-0 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3 pointer-events-none"></div>
       
-      {/* Floating elements for visual appeal */}
-      <div className="absolute top-10 right-10 w-12 h-12 bg-propwiz-green/20 rounded-lg rotate-12 animate-float hidden lg:block"></div>
-      <div className="absolute bottom-20 right-20 w-8 h-8 bg-propwiz-green/30 rounded-full animate-pulse hidden lg:block"></div>
-      
-      <div>
+      <div className="relative z-10">
         {/* Eye-catching badge with trending indicator */}
-        <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-propwiz-green/10 to-propwiz-green/20 rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm animate-fade-in">
+        <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm animate-fade-in">
           <Zap className="w-4 h-4 mr-2 animate-pulse" />
           AI-Powered Real Estate Deal Intelligence
           <TrendingUp className="w-4 h-4 ml-2" />
@@ -48,7 +43,7 @@ const Hero: React.FC = () => {
           </Button>
         </div>
         
-        {/* Social proof with investor avatars */}
+        {/* Clean social proof without weird circles */}
         <div className="flex items-center space-x-4 animate-fade-in">
           <div className="flex -space-x-3">
             <img 

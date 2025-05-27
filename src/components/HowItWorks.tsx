@@ -22,7 +22,7 @@ const steps = [
 
 const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-16 bg-gradient-to-b from-white to-propwiz-light">
+    <section id="how-it-works" className="py-16 bg-gradient-to-b from-white to-propwiz-green/8">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">How It Works</h2>
@@ -37,7 +37,7 @@ const HowItWorks: React.FC = () => {
               key={index} 
               className="bg-white rounded-xl p-6 text-center border border-gray-100 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 duration-300"
             >
-              <div className="mx-auto flex items-center justify-center w-16 h-16 bg-propwiz-light rounded-full mb-5">
+              <div className="mx-auto flex items-center justify-center w-16 h-16 bg-propwiz-green/8 rounded-full mb-5">
                 {step.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-propwiz-dark">
