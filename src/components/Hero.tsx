@@ -7,9 +7,6 @@ import { Link } from "react-router-dom";
 const Hero: React.FC = () => {
   return (
     <div className="py-8 lg:py-16 relative">
-      {/* Clean background gradients - no weird circles/squares */}
-      <div className="absolute inset-0 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3 pointer-events-none"></div>
-      
       <div className="relative z-10">
         {/* Eye-catching badge with trending indicator */}
         <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm animate-fade-in">
@@ -37,13 +34,15 @@ const Hero: React.FC = () => {
           </Link>
           
           {/* Secondary CTA */}
-          <Button variant="outline" className="rounded-full px-6 py-6 border-propwiz-green text-propwiz-green hover:bg-propwiz-green hover:text-white transition-all duration-300">
-            <Users className="mr-2 h-4 w-4" />
-            See How It Works
-          </Button>
+          <a href="#how-it-works">
+            <Button variant="outline" className="rounded-full px-6 py-6 border-propwiz-green text-propwiz-green hover:bg-propwiz-green hover:text-white transition-all duration-300">
+              <Users className="mr-2 h-4 w-4" />
+              How it Works
+            </Button>
+          </a>
         </div>
         
-        {/* Clean social proof without weird circles */}
+        {/* Clean social proof */}
         <div className="flex items-center space-x-4 animate-fade-in">
           <div className="flex -space-x-3">
             <img 

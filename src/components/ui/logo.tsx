@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Home } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface LogoProps {
@@ -27,18 +26,26 @@ export const Logo: React.FC<LogoProps> = ({
   };
 
   const iconSizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-5 w-5',
-    lg: 'h-6 w-6'
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base'
   };
 
   return (
     <Link to="/" className={`flex items-center hover:opacity-80 transition-opacity duration-200 ${className}`}>
-      <div className={`${sizeClasses[size]} bg-propwiz-green rounded-lg flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-200`}>
-        <Home className={`${iconSizeClasses[size]} text-white`} />
+      <div className={`${sizeClasses[size]} bg-gradient-to-br from-propwiz-green to-green-600 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 relative overflow-hidden`}>
+        {/* Custom geometric pattern for uniqueness */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent"></div>
+        <div className="relative z-10 flex items-center justify-center">
+          <div className={`${iconSizeClasses[size]} font-bold text-white tracking-tight`}>
+            <span className="font-extrabold">RE</span>
+          </div>
+        </div>
+        {/* Small accent dot */}
+        <div className="absolute top-1 right-1 w-1.5 h-1.5 bg-white/60 rounded-full"></div>
       </div>
       {showText && (
-        <span className={`ml-2 font-bold ${textSizeClasses[size]} text-propwiz-dark`}>
+        <span className={`ml-3 font-bold ${textSizeClasses[size]} text-propwiz-dark tracking-tight`}>
           RE<span className="text-propwiz-green">Dealr</span>
         </span>
       )}
