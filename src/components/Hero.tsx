@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           Simply send a WhatsApp message like "Find me a 2 bed in Miami under $500K" and get instant results with comprehensive deal analysis.
         </p>
         
-        {/* Enhanced CTA section */}
+        {/* Enhanced CTA section - removed "How it Works" button */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in">
           <Link to="/signup" className="group">
             <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-6 text-white flex items-center text-lg shadow-lg shadow-propwiz-green/20 hover:shadow-propwiz-green/30 transition-all transform hover:scale-105 hover:-translate-y-1 duration-300">
@@ -32,14 +32,6 @@ const Hero: React.FC = () => {
               <div className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">Free Beta</div>
             </Button>
           </Link>
-          
-          {/* Secondary CTA */}
-          <a href="#how-it-works">
-            <Button variant="outline" className="rounded-full px-6 py-6 border-propwiz-green text-propwiz-green hover:bg-propwiz-green hover:text-white transition-all duration-300">
-              <Users className="mr-2 h-4 w-4" />
-              How it Works
-            </Button>
-          </a>
         </div>
         
         {/* Clean social proof */}
