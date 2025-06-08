@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import InteractiveWhatsAppDemo from '@/components/InteractiveWhatsAppDemo';
+import WhatsAppDemo from '@/components/WhatsAppDemo';
 import HowItWorks from '@/components/HowItWorks';
 import Features from '@/components/Features';
 import StreamlinedTestimonials from '@/components/StreamlinedTestimonials';
@@ -18,7 +18,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-center py-12">
             <Hero />
-            <InteractiveWhatsAppDemo />
+            <WhatsAppDemo />
           </div>
         </div>
       </div>

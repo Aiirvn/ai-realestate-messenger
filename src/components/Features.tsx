@@ -41,7 +41,7 @@ const Features: React.FC = () => {
           <div className="inline-block px-4 py-2 bg-propwiz-light rounded-full text-propwiz-green font-medium text-sm mb-4">
             UNLOCK • BUILD • DELIVER
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">Unlock Deals, Build Loyalty—All on WhatsApp</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">Deals & Loyalty on WhatsApp</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Professional-grade real estate tools that work entirely within WhatsApp's familiar interface
           </p>

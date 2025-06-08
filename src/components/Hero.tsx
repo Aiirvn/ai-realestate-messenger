@@ -8,16 +8,16 @@ const Hero: React.FC = () => {
   return (
     <div className="py-8 lg:py-16 relative">
       <div className="relative z-10">
-        {/* New tagline badge */}
+        {/* Updated tagline badge */}
         <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm animate-fade-in">
           <MessageSquare className="w-4 h-4 mr-2 animate-pulse" />
-          Unlock Deals, Build Loyalty—All on WhatsApp
+          Deals & Loyalty on WhatsApp
           <TrendingUp className="w-4 h-4 ml-2" />
         </div>
         
-        {/* Updated headline with new tagline integration */}
+        {/* Updated headline */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-propwiz-dark leading-tight mb-6 animate-fade-in">
-          Empower Your Real Estate Success with <span className="text-propwiz-green bg-gradient-to-r from-propwiz-green to-green-500 bg-clip-text text-transparent">redealr's WhatsApp Chatbot</span>
+          Unlock Deals, Build Loyalty—<span className="text-propwiz-green bg-gradient-to-r from-propwiz-green to-green-500 bg-clip-text text-transparent">All on WhatsApp</span>
         </h1>
         
         {/* Enhanced subheadline */}
