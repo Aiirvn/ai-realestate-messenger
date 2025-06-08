@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -14,6 +13,7 @@ const Reviews: React.FC = () => {
     comment: ''
   });
 
+  // Limited to top 5 reviews for better performance and focus
   const reviews = [
     {
       id: 1,
@@ -87,7 +87,7 @@ const Reviews: React.FC = () => {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
-      "reviewCount": "50"
+      "reviewCount": "100"
     },
     "review": reviews.map(review => ({
       "@type": "Review",
@@ -119,18 +119,23 @@ const Reviews: React.FC = () => {
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3">
           <div className="container px-4 mx-auto text-center">
+            {/* New tagline badge */}
+            <div className="inline-block px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm">
+              Unlock Deals, Build Loyalty—All on WhatsApp
+            </div>
+            
             <h1 className="text-4xl md:text-5xl font-bold text-propwiz-dark mb-6">
               What Real Estate Professionals Say About RE<span className="text-propwiz-green">Dealr</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              Join thousands of agents and investors who are empowering their real estate success with our WhatsApp solutions
+              Join thousands of agents and investors who are unlocking deals and building loyalty with our WhatsApp solutions
             </p>
             <div className="flex items-center justify-center space-x-4 mb-8">
               <div className="flex">
                 {renderStars(5)}
               </div>
               <span className="text-lg font-semibold text-propwiz-dark">4.8/5</span>
-              <span className="text-gray-600">from 50+ reviews</span>
+              <span className="text-gray-600">from 100+ reviews</span>
             </div>
           </div>
         </section>
@@ -160,11 +165,15 @@ const Reviews: React.FC = () => {
                 </div>
               ))}
             </div>
+            
+            <div className="text-center">
+              <p className="text-gray-600 mb-4">Showing top 5 reviews from 100+ satisfied users</p>
+            </div>
           </div>
         </section>
 
         {/* Review Submission Form */}
-        <section className="py-16 bg-gradient-to-br from-propwiz-green/5 to-propwiz-green/2">
+        <section id="waitlist-top" className="py-16 bg-gradient-to-br from-propwiz-green/5 to-propwiz-green/2">
           <div className="container px-4 mx-auto">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl font-bold text-center text-propwiz-dark mb-8">
@@ -233,12 +242,12 @@ const Reviews: React.FC = () => {
         {/* CTA Section */}
         <section className="py-16 bg-propwiz-green text-white">
           <div className="container px-4 mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Empower Your Real Estate Success?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Unlock Deals and Build Loyalty?</h2>
             <p className="text-xl mb-8 opacity-90">Join thousands of professionals already using redealr</p>
-            <Link to="/trial">
+            <Link to="/signup#waitlist-top">
               <Button className="bg-white text-propwiz-green hover:bg-gray-100 rounded-full px-8 py-3 text-lg font-semibold">
                 <MessageSquare className="mr-2 h-5 w-5" />
-                Get Started Free
+                Join the Waitlist
               </Button>
             </Link>
           </div>

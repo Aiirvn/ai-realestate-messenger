@@ -9,20 +9,25 @@ const CTA: React.FC = () => {
     <section className="py-20 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
+          {/* New tagline integration */}
+          <div className="inline-block px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm animate-fade-in">
+            Unlock Deals, Build Loyalty—All on WhatsApp
+          </div>
+          
           <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4 animate-fade-in">
             Ready to Empower Your Real Estate Success?
           </h2>
           <p className="text-lg mb-8 text-gray-700 animate-fade-in">
-            Join thousands of professionals using RE<span className="font-semibold text-propwiz-green">Dealr</span>'s seamless WhatsApp solutions to transform their business
+            Join thousands of professionals using RE<span className="font-semibold text-propwiz-green">Dealr</span>'s seamless WhatsApp solutions to unlock deals and build lifetime client loyalty
           </p>
           
           <div className="max-w-md mx-auto mb-8 animate-fade-in">
-            <Link to="/signup">
+            <Link to="/signup#waitlist-top">
               <Button 
                 className="w-full sm:w-auto bg-propwiz-green hover:bg-green-600 rounded-full h-12 px-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
               >
                 <MessageSquare className="mr-2 h-5 w-5 group-hover:animate-pulse" />
-                Start Your Success Journey
+                Join the Waitlist
               </Button>
             </Link>
             <p className="text-xs text-gray-500 mt-3">

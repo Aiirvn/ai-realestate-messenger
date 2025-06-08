@@ -1,31 +1,33 @@
 
 import React, { useState } from 'react';
-import { MessageSquare, FileSpreadsheet, Clock, Users } from 'lucide-react';
+import { MessageSquare, FileSpreadsheet, Clock, Users, Search, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
-    icon: <Clock className="h-10 w-10 text-propwiz-green" />,
-    title: "Minutes, Not Hours",
-    description: "Deliver professional-grade property analysis instantly via WhatsApp - impress clients with speed and thoroughness.",
-    details: "Complete comprehensive deal analysis including cap rates, cash flow projections, ROI calculations, and market comparisons in under 3 minutes. Your clients will be amazed by your efficiency."
+    icon: <Search className="h-10 w-10 text-propwiz-green" />,
+    title: "Unlock Off-Market Deals",
+    description: "AI-powered deal discovery finds hidden opportunities before they hit the public market.",
+    details: "Our advanced algorithms scan multiple sources 24/7 to identify off-market properties that match your investment criteria. Get alerts instantly via WhatsApp when new deals become available."
   },
   {
     icon: <Users className="h-10 w-10 text-propwiz-green" />,
-    title: "Turn Leads into Lifetime Clients",
-    description: "Provide such exceptional value that clients keep coming back and refer others to you.",
-    details: "When you consistently deliver professional insights quickly, clients trust you as their go-to expert. Build a reputation that generates repeat business and referrals automatically."
+    title: "Build Lifetime Client Loyalty", 
+    description: "Transform one-time leads into lifelong relationships with intelligent nurturing workflows.",
+    details: "Automated follow-up sequences, personalized communications, and value-added insights keep clients engaged. Build trust through consistent, professional interactions that generate referrals."
   },
   {
-    icon: <FileSpreadsheet className="h-10 w-10 text-propwiz-green" />,
-    title: "Professional Reports",
-    description: "Generate polished analysis reports that make you look like the expert you are.",
-    details: "Automatically formatted Google Sheets with professional metrics, comparables, and investment projections. Share directly with clients or use for your own deal tracking."
+    icon: <Clock className="h-10 w-10 text-propwiz-green" />,
+    title: "Professional Results in Minutes",
+    description: "Deliver comprehensive property analysis instantly—impress clients with speed and thoroughness.",
+    details: "Complete deal analysis including cap rates, cash flow projections, ROI calculations, and market comparisons in under 3 minutes. Professional-grade reports that position you as the expert."
   },
   {
     icon: <MessageSquare className="h-10 w-10 text-propwiz-green" />,
-    title: "Client-Ready Communication",
-    description: "Get deal summaries formatted perfectly for sharing with clients via text, email, or presentation.",
-    details: "Every analysis comes with clear, jargon-free summaries that clients can easily understand. Present complex data in a way that builds confidence and trust."
+    title: "WhatsApp-Native Experience",
+    description: "Everything happens in WhatsApp's familiar interface—no new apps to learn or download.",
+    details: "Voice commands, group chats, document sharing, and automated responses all work seamlessly within WhatsApp. Your clients stay in their comfort zone while you deliver premium service."
   }
 ];
 
@@ -37,11 +39,11 @@ const Features: React.FC = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12">
           <div className="inline-block px-4 py-2 bg-propwiz-light rounded-full text-propwiz-green font-medium text-sm mb-4">
-            PROFESSIONAL ADVANTAGE
+            UNLOCK • BUILD • DELIVER
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">Stand Out from the Competition</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">Unlock Deals, Build Loyalty—All on WhatsApp</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Deliver professional-grade analysis that builds trust and keeps clients coming back
+            Professional-grade real estate tools that work entirely within WhatsApp's familiar interface
           </p>
         </div>
         
@@ -81,6 +83,15 @@ const Features: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Link to="/features">
+            <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-3">
+              <Zap className="mr-2 h-4 w-4" />
+              Explore All Features
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

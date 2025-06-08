@@ -8,29 +8,29 @@ const Hero: React.FC = () => {
   return (
     <div className="py-8 lg:py-16 relative">
       <div className="relative z-10">
-        {/* Updated badge with unified messaging */}
+        {/* New tagline badge */}
         <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm animate-fade-in">
-          <Clock className="w-4 h-4 mr-2 animate-pulse" />
-          Seamless WhatsApp Solutions for Real Estate Success
+          <MessageSquare className="w-4 h-4 mr-2 animate-pulse" />
+          Unlock Deals, Build Loyalty—All on WhatsApp
           <TrendingUp className="w-4 h-4 ml-2" />
         </div>
         
-        {/* Updated headline with unified brand message */}
+        {/* Updated headline with new tagline integration */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-propwiz-dark leading-tight mb-6 animate-fade-in">
           Empower Your Real Estate Success with <span className="text-propwiz-green bg-gradient-to-r from-propwiz-green to-green-500 bg-clip-text text-transparent">redealr's WhatsApp Chatbot</span>
         </h1>
         
-        {/* Updated subheadline */}
+        {/* Enhanced subheadline */}
         <p className="text-lg mb-8 text-gray-700 max-w-lg animate-fade-in">
-          Find deals, nurture leads, and automate follow-ups—all in one familiar place. Professional-grade analysis in minutes, not hours.
+          Unlock off-market deals, build lifetime client loyalty, and automate follow-ups—all in WhatsApp's familiar interface. Professional results in minutes, not hours.
         </p>
         
-        {/* Enhanced CTA section */}
+        {/* Standardized CTA section */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in">
-          <Link to="/signup" className="group">
+          <Link to="/signup#waitlist-top" className="group">
             <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-6 text-white flex items-center text-lg shadow-lg shadow-propwiz-green/20 hover:shadow-propwiz-green/30 transition-all transform hover:scale-105 hover:-translate-y-1 duration-300">
               <MessageSquare className="mr-2 h-5 w-5 group-hover:animate-pulse" />
-              Start Empowering Your Success
+              Join the Waitlist
               <div className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">Free Beta</div>
             </Button>
           </Link>
