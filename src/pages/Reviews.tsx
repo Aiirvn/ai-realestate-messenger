@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -20,7 +21,7 @@ const Reviews: React.FC = () => {
       name: "Jane D.",
       role: "Real Estate Agent",
       rating: 5,
-      comment: "redealr saved me hours with its AI deal finder and CRM! The automation tools are incredible for real estate professionals.",
+      comment: "Saved me hours with its AI deal finder and CRM! The automation tools are incredible for real estate professionals.",
       date: "2025-06-05",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=face"
     },
@@ -119,16 +120,15 @@ const Reviews: React.FC = () => {
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3">
           <div className="container px-4 mx-auto text-center">
-            {/* New tagline badge */}
             <div className="inline-block px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm">
-              Unlock Deals, Build Loyalty—All on WhatsApp
+              Real Estate Chatbot Reviews
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-propwiz-dark mb-6">
-              What Real Estate Professionals Say About RE<span className="text-propwiz-green">Dealr</span>
+              What Real Estate Professionals Say About re<span className="text-propwiz-green">dealr</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              Join thousands of agents and investors who are unlocking deals and building loyalty with our WhatsApp solutions
+              Join thousands of agents and investors who are finding off-market deals and nurturing leads with our AI chatbot
             </p>
             <div className="flex items-center justify-center space-x-4 mb-8">
               <div className="flex">
@@ -177,7 +177,7 @@ const Reviews: React.FC = () => {
           <div className="container px-4 mx-auto">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl font-bold text-center text-propwiz-dark mb-8">
-                Share Your REDealr Experience
+                Share Your redealr Experience
               </h2>
               <form onSubmit={handleSubmitReview} className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -242,7 +242,7 @@ const Reviews: React.FC = () => {
         {/* CTA Section */}
         <section className="py-16 bg-propwiz-green text-white">
           <div className="container px-4 mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Unlock Deals and Build Loyalty?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Find Off-Market Deals?</h2>
             <p className="text-xl mb-8 opacity-90">Join thousands of professionals already using redealr</p>
             <Link to="/signup#waitlist-top">
               <Button className="bg-white text-propwiz-green hover:bg-gray-100 rounded-full px-8 py-3 text-lg font-semibold">
