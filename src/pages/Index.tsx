@@ -6,6 +6,7 @@ import WhatsAppDemo from '@/components/WhatsAppDemo';
 import HowItWorks from '@/components/HowItWorks';
 import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
+import SEOContent from '@/components/SEOContent';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
@@ -23,6 +24,7 @@ const Index = () => {
       </div>
       <HowItWorks />
       <Features />
+      <SEOContent />
       <Testimonials />
       <CTA />
       <Footer />
