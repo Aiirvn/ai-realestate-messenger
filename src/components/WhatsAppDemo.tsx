@@ -3,59 +3,38 @@ import React, { useState } from 'react';
 import { MessageSquare, Send } from 'lucide-react';
 
 const WhatsAppDemo: React.FC = () => {
-  const [message, setMessage] = useState('');
-  const [chatHistory, setChatHistory] = useState([
-    {
-      text: "👋 Hi! I'm your AI real estate assistant. Try asking me to find deals or analyze properties!",
-      isBot: true,
-      timestamp: "2:33 PM"
-    }
-  ]);
+  const [showResponse, setShowResponse] = useState(false);
 
   const handleSendMessage = () => {
-    if (!message.trim()) return;
-
-    // Add user message
-    const userMessage = {
-      text: message,
-      isBot: false,
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-    };
-
-    setChatHistory(prev => [...prev, userMessage]);
-
-    // Generate bot response based on keywords
-    let botResponse = "";
-    const lowerMessage = message.toLowerCase();
-
-    if (lowerMessage.includes('deal') || lowerMessage.includes('property') || lowerMessage.includes('find')) {
-      botResponse = "🏡 Found 3 off-market deals in your area!\n\n📍 123 Oak Street - $485K\n• 3BR/2BA, 1,850 sqft\n• Cap Rate: 8.2%\n• ROI: 15%\n\nWant detailed analysis? 📊";
-    } else if (lowerMessage.includes('analyze') || lowerMessage.includes('analysis')) {
-      botResponse = "📊 DEAL ANALYSIS COMPLETE\n\n🏠 Property: 123 Oak Street\n💰 Purchase: $485,000\n📈 ARV: $580,000\n\n💵 Monthly Cash Flow: +$1,350\n📈 ROI: 15.2%\n✅ Strong buy signal!";
-    } else if (lowerMessage.includes('lead') || lowerMessage.includes('client')) {
-      botResponse = "👥 LEAD MANAGEMENT ACTIVE\n\n🔥 Hot Leads (3):\n• Sarah M. - Investor, $500K budget\n• Mike Chen - First-time buyer\n• Lisa K. - Rental property\n\n📅 Follow-ups scheduled ✅";
-    } else {
-      botResponse = "I can help you find deals, analyze properties, or manage leads. What would you like to do? 🤝";
-    }
-
-    // Add bot response after a delay
-    setTimeout(() => {
-      const botMessage = {
-        text: botResponse,
-        isBot: true,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      };
-      setChatHistory(prev => [...prev, botMessage]);
-    }, 1000);
-
-    setMessage('');
+    setShowResponse(true);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      handleSendMessage();
+  const properties = [
+    {
+      address: "123 Ocean Drive, Miami Beach, FL",
+      price: "$485,000",
+      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=300&h=200&fit=crop",
+      dealScore: "9.2/10",
+      capRate: "8.5%",
+      type: "2BR/2BA"
+    },
+    {
+      address: "456 Biscayne Blvd, Miami, FL", 
+      price: "$475,000",
+      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=300&h=200&fit=crop",
+      dealScore: "8.8/10",
+      capRate: "7.9%",
+      type: "2BR/2BA"
+    },
+    {
+      address: "789 Collins Ave, Miami Beach, FL",
+      price: "$495,000", 
+      image: "https://images.unsplash.com/photo-1483058712412-e9573fc25ebb?w=300&h=200&fit=crop",
+      dealScore: "8.5/10",
+      capRate: "7.2%",
+      type: "2BR/2BA"
     }
-  };
+  ];
 
   return (
     <div className="max-w-sm mx-auto">
@@ -73,20 +52,74 @@ const WhatsAppDemo: React.FC = () => {
 
         {/* Chat Area */}
         <div className="h-96 bg-gray-50 p-4 overflow-y-auto">
-          {chatHistory.map((msg, index) => (
-            <div key={index} className={`mb-4 ${msg.isBot ? '' : 'flex justify-end'}`}>
-              <div className={`max-w-xs p-3 rounded-2xl ${
-                msg.isBot 
-                  ? 'bg-white rounded-bl-md shadow-sm' 
-                  : 'bg-propwiz-green text-white rounded-br-md'
-              }`}>
-                <p className="text-sm whitespace-pre-line">{msg.text}</p>
-                <p className={`text-xs mt-1 ${msg.isBot ? 'text-gray-500' : 'text-white/70'}`}>
-                  {msg.timestamp}
+          {!showResponse ? (
+            <>
+              <div className="mb-4">
+                <div className="max-w-xs p-3 rounded-2xl bg-white rounded-bl-md shadow-sm">
+                  <p className="text-sm">👋 Hi! I'm your AI real estate assistant. I can help you find deals, analyze properties, and manage leads!</p>
+                  <p className="text-xs mt-1 text-gray-500">2:33 PM</p>
+                </div>
+              </div>
+              
+              {/* Banner */}
+              <div className="bg-propwiz-green/10 border border-propwiz-green/20 rounded-xl p-3 mb-4">
+                <p className="text-sm text-propwiz-green font-medium text-center">
+                  👆 Click Send to see the magic happen!
                 </p>
               </div>
-            </div>
-          ))}
+            </>
+          ) : (
+            <>
+              <div className="mb-4">
+                <div className="max-w-xs p-3 rounded-2xl bg-white rounded-bl-md shadow-sm">
+                  <p className="text-sm">👋 Hi! I'm your AI real estate assistant. I can help you find deals, analyze properties, and manage leads!</p>
+                  <p className="text-xs mt-1 text-gray-500">2:33 PM</p>
+                </div>
+              </div>
+              
+              <div className="mb-4 flex justify-end">
+                <div className="max-w-xs p-3 rounded-2xl bg-propwiz-green text-white rounded-br-md">
+                  <p className="text-sm">Find me 2 bedroom 2 bathroom deals in Miami for under 500k</p>
+                  <p className="text-xs mt-1 text-white/70">2:34 PM</p>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <div className="max-w-xs p-3 rounded-2xl bg-white rounded-bl-md shadow-sm">
+                  <p className="text-sm">🏡 Found 3 amazing deals in Miami! Here are your options:</p>
+                  <p className="text-xs mt-1 text-gray-500">2:35 PM</p>
+                </div>
+              </div>
+
+              {properties.map((property, index) => (
+                <div key={index} className="mb-4">
+                  <div className="max-w-xs bg-white rounded-2xl rounded-bl-md shadow-sm overflow-hidden">
+                    <img 
+                      src={property.image} 
+                      alt={property.address}
+                      className="w-full h-24 object-cover"
+                    />
+                    <div className="p-3">
+                      <p className="text-sm font-semibold text-propwiz-dark">{property.price}</p>
+                      <p className="text-xs text-gray-600 mb-2">{property.address}</p>
+                      <div className="flex justify-between text-xs">
+                        <span className="text-propwiz-green font-medium">Deal Score: {property.dealScore}</span>
+                        <span className="text-gray-600">Cap Rate: {property.capRate}</span>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-1">{property.type}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              <div className="mb-4">
+                <div className="max-w-xs p-3 rounded-2xl bg-white rounded-bl-md shadow-sm">
+                  <p className="text-sm">📊 Want detailed analysis on any of these properties? Just ask!</p>
+                  <p className="text-xs mt-1 text-gray-500">2:36 PM</p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Input Area */}
@@ -94,11 +127,9 @@ const WhatsAppDemo: React.FC = () => {
           <div className="flex items-center space-x-2">
             <input
               type="text"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyPress={handleKeyPress}
-              placeholder="Try: 'Find deals in Miami' or 'Analyze this property'"
-              className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-propwiz-green"
+              value="Find me 2 bedroom 2 bathroom deals in Miami for under 500k"
+              readOnly
+              className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm bg-gray-50 text-gray-700"
             />
             <button
               onClick={handleSendMessage}
@@ -108,7 +139,7 @@ const WhatsAppDemo: React.FC = () => {
             </button>
           </div>
           <p className="text-xs text-gray-500 mt-2 text-center">
-            Try asking about deals, analysis, or lead management!
+            {!showResponse ? 'Click Send to see AI-powered deal discovery in action!' : 'Experience real-time property analysis!'}
           </p>
         </div>
       </div>

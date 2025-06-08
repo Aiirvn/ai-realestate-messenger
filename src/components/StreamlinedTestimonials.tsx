@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 const topReviews = [
   {
@@ -24,27 +24,10 @@ const topReviews = [
     role: "Property Manager",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=60&h=60&fit=crop&crop=face"
-  },
-  {
-    quote: "Professional-grade analysis in minutes, not hours. My clients are consistently impressed with the speed and quality of insights.",
-    author: "David Kim",
-    role: "Real Estate Broker",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
-  },
-  {
-    quote: "The automation tools have revolutionized my follow-up process. No more missed opportunities - everything happens seamlessly.",
-    author: "Lisa Thompson",
-    role: "Investment Advisor",
-    rating: 5,
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face"
   }
 ];
 
 const StreamlinedTestimonials: React.FC = () => {
-  const [showAll, setShowAll] = useState(false);
-  const displayedReviews = showAll ? topReviews : topReviews.slice(0, 3);
-
   const renderStars = (rating: number) => {
     return [...Array(5)].map((_, i) => (
       <Star
@@ -65,7 +48,7 @@ const StreamlinedTestimonials: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-          {displayedReviews.map((testimonial, index) => (
+          {topReviews.map((testimonial, index) => (
             <div 
               key={index} 
               className="bg-white rounded-xl p-6 shadow-sm flex flex-col h-full border border-gray-100 hover:shadow-lg transition-all duration-300"
@@ -90,21 +73,6 @@ const StreamlinedTestimonials: React.FC = () => {
         </div>
         
         <div className="text-center">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="inline-flex items-center px-6 py-3 bg-white border border-propwiz-green text-propwiz-green rounded-full hover:bg-propwiz-green hover:text-white transition-all duration-300 mr-4"
-          >
-            {showAll ? (
-              <>
-                Show Less <ChevronUp className="ml-2 h-4 w-4" />
-              </>
-            ) : (
-              <>
-                Show More <ChevronDown className="ml-2 h-4 w-4" />
-              </>
-            )}
-          </button>
-          
           <Link 
             to="/reviews"
             className="inline-flex items-center px-6 py-3 bg-propwiz-green text-white rounded-full hover:bg-green-600 transition-all duration-300"
