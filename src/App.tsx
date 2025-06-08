@@ -7,6 +7,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Signup from "./pages/Signup";
+import Reviews from "./pages/Reviews";
+import Features from "./pages/Features";
 import NotFound from "./pages/NotFound";
 
 // Create a new client for React Query
@@ -23,6 +25,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/trial" element={<Signup />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/features" element={<Features />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

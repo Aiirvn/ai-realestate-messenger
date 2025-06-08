@@ -10,10 +10,10 @@ const CTA: React.FC = () => {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4 animate-fade-in">
-            Start Building Client Loyalty Today
+            Ready to Empower Your Real Estate Success?
           </h2>
           <p className="text-lg mb-8 text-gray-700 animate-fade-in">
-            Join RE<span className="font-semibold text-propwiz-green">Dealr</span> and deliver professional-grade analysis that turns every interaction into a lasting client relationship
+            Join thousands of professionals using RE<span className="font-semibold text-propwiz-green">Dealr</span>'s seamless WhatsApp solutions to transform their business
           </p>
           
           <div className="max-w-md mx-auto mb-8 animate-fade-in">
@@ -22,11 +22,11 @@ const CTA: React.FC = () => {
                 className="w-full sm:w-auto bg-propwiz-green hover:bg-green-600 rounded-full h-12 px-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
               >
                 <MessageSquare className="mr-2 h-5 w-5 group-hover:animate-pulse" />
-                Start Impressing Clients
+                Start Your Success Journey
               </Button>
             </Link>
             <p className="text-xs text-gray-500 mt-3">
-              Free beta access - start building client loyalty today
+              Free beta access - empower your success today
             </p>
           </div>
           
@@ -35,13 +35,13 @@ const CTA: React.FC = () => {
               <div className="w-12 h-12 bg-propwiz-green/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-propwiz-green/30 transition-colors duration-300">
                 <Clock className="h-6 w-6 text-propwiz-green" />
               </div>
-              <span className="text-propwiz-dark">Professional analysis in minutes</span>
+              <span className="text-propwiz-dark">Professional results in minutes</span>
             </div>
             <div className="flex items-center group">
               <div className="w-12 h-12 bg-propwiz-green/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-propwiz-green/30 transition-colors duration-300">
                 <Shield className="h-6 w-6 text-propwiz-green" />
               </div>
-              <span className="text-propwiz-dark">No setup required</span>
+              <span className="text-propwiz-dark">Familiar WhatsApp interface</span>
             </div>
           </div>
         </div>
