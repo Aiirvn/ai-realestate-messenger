@@ -21,7 +21,7 @@ const SEOContent: React.FC = () => {
               </p>
               <div className="relative mx-auto max-w-2xl mb-6">
                 <img 
-                  src="https://redealr.com/images/whatsapp-analysis.jpg"
+                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=400&fit=crop"
                   alt="redealr WhatsApp analysis interface showing property data and AI insights"
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                   loading="lazy"
@@ -97,7 +97,7 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://redealr.com/images/deal-finder.jpg"
+                    src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"
                     alt="Deal Finder - AI-powered tool for finding off-market real estate opportunities"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"
@@ -111,7 +111,7 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://redealr.com/images/crm-dashboard.jpg"
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
                     alt="Lead Nurturing CRM - Automated system for managing client relationships"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"
@@ -125,7 +125,7 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://redealr.com/images/whatsapp-auto.jpg"
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop"
                     alt="Automation Tools - WhatsApp integration for seamless property analysis"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"

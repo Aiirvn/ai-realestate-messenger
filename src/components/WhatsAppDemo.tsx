@@ -4,9 +4,17 @@ import { MessageSquare, Send } from 'lucide-react';
 
 const WhatsAppDemo: React.FC = () => {
   const [showResponse, setShowResponse] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSendMessage = () => {
-    setShowResponse(true);
+    setIsLoading(true);
+    setShowResponse(false);
+    
+    // Simulate typing delay
+    setTimeout(() => {
+      setIsLoading(false);
+      setShowResponse(true);
+    }, 2000);
   };
 
   const properties = [
@@ -49,7 +57,7 @@ const WhatsAppDemo: React.FC = () => {
 
         {/* Chat Area */}
         <div className="h-[500px] bg-gray-50 p-4 overflow-y-auto">
-          {!showResponse ? (
+          {!showResponse && !isLoading ? (
             <>
               <div className="mb-6">
                 <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
@@ -64,6 +72,36 @@ const WhatsAppDemo: React.FC = () => {
                   Click send to search for properties 👇
                 </p>
                 <div className="absolute -bottom-2 right-8 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-gray-800"></div>
+              </div>
+            </>
+          ) : isLoading ? (
+            <>
+              <div className="mb-4">
+                <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
+                  <p className="text-sm text-gray-800">Hi there! I can help you find investment deals. Click the send button to search for "2 bed in Miami under $500K" 👇</p>
+                  <p className="text-xs mt-2 text-gray-500">1:51 PM</p>
+                </div>
+              </div>
+              
+              <div className="mb-4 flex justify-end">
+                <div className="max-w-sm p-3 rounded-2xl bg-propwiz-green text-white rounded-br-md">
+                  <p className="text-sm">Find me a 2 bed in Miami under $500K</p>
+                  <p className="text-xs mt-1 text-white/70">1:51 PM</p>
+                </div>
+              </div>
+
+              {/* Loading State */}
+              <div className="mb-4">
+                <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
+                  <div className="flex items-center space-x-2">
+                    <div className="flex space-x-1">
+                      <div className="w-2 h-2 bg-propwiz-green rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-propwiz-green rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                      <div className="w-2 h-2 bg-propwiz-green rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                    </div>
+                    <p className="text-sm text-gray-600">Searching for properties...</p>
+                  </div>
+                </div>
               </div>
             </>
           ) : (
@@ -125,11 +163,12 @@ const WhatsAppDemo: React.FC = () => {
               type="text"
               value="Find me a 2 bed in Miami under $500K"
               readOnly
-              className="flex-1 border border-gray-300 rounded-full px-4 py-3 text-sm bg-white text-gray-800"
+              className="flex-1 border border-gray-300 rounded-full px-4 py-3 text-sm bg-white text-gray-500"
             />
             <button
               onClick={handleSendMessage}
-              className="bg-propwiz-green text-white rounded-full p-3 hover:bg-green-600 transition-colors"
+              disabled={isLoading}
+              className="bg-propwiz-green text-white rounded-full p-3 hover:bg-green-600 transition-colors disabled:opacity-50"
             >
               <Send className="h-5 w-5" />
             </button>

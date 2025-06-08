@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
           </div>
           <div>
             <p className="text-sm text-gray-600">
-              <span className="font-semibold text-propwiz-green">2,000+</span> real estate professionals empowered
+              <span className="font-semibold text-propwiz-green">150+</span> real estate professionals empowered
             </p>
             <div className="flex items-center mt-1">
               <div className="flex text-yellow-400">
