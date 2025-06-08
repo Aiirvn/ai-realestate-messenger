@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { MessageSquare, Send } from 'lucide-react';
+import { MessageSquare, Send, ArrowDown } from 'lucide-react';
 
 const WhatsAppDemo: React.FC = () => {
   const [showResponse, setShowResponse] = useState(false);
@@ -37,7 +37,7 @@ const WhatsAppDemo: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="max-w-md mx-auto">
       <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
         {/* WhatsApp Header */}
         <div className="bg-propwiz-green text-white p-4 flex items-center">
@@ -131,12 +131,19 @@ const WhatsAppDemo: React.FC = () => {
               readOnly
               className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm bg-gray-50 text-gray-700"
             />
-            <button
-              onClick={handleSendMessage}
-              className="bg-propwiz-green text-white rounded-full p-2 hover:bg-green-600 transition-colors"
-            >
-              <Send className="h-4 w-4" />
-            </button>
+            <div className="relative">
+              {!showResponse && (
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-propwiz-green animate-bounce">
+                  <ArrowDown className="h-4 w-4" />
+                </div>
+              )}
+              <button
+                onClick={handleSendMessage}
+                className="bg-propwiz-green text-white rounded-full p-2 hover:bg-green-600 transition-colors"
+              >
+                <Send className="h-4 w-4" />
+              </button>
+            </div>
           </div>
           <p className="text-xs text-gray-500 mt-2 text-center">
             {!showResponse ? 'Click Send to see AI-powered deal discovery in action!' : 'Experience real-time property analysis!'}

@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="mt-8 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">© {currentYear} REDealr. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© {currentYear} redealr. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <Link to="/signup" className="text-gray-500 hover:text-propwiz-green text-sm transition-colors duration-200">Join Waitlist</Link>
           </div>
