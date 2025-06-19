@@ -5,6 +5,11 @@ import { MessageSquare, TrendingUp, Users, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
+  const handleCTAClick = () => {
+    // Enhanced CTA tracking and functionality
+    console.log('CTA clicked - redirecting to signup');
+  };
+
   return (
     <div className="py-8 lg:py-16 relative">
       <div className="relative z-10">
@@ -30,10 +35,10 @@ const Hero: React.FC = () => {
           Imagine scoring your next real estate deal with a single text! 🏠 redealr.com uses AI to scour the market and deliver hot opportunities straight to your WhatsApp. Search instantly, nurture leads with personalized deal alerts, and close faster—all from the app you already love. Perfect for investors, flippers, and first-timers craving speed and simplicity.
         </p>
         
-        {/* Standardized CTA section */}
+        {/* Enhanced CTA section with improved functionality */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in">
-          <Link to="/signup#waitlist-top" className="group">
-            <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-6 text-white flex items-center text-lg shadow-lg shadow-propwiz-green/20 hover:shadow-propwiz-green/30 transition-all transform hover:scale-105 hover:-translate-y-1 duration-300">
+          <Link to="/signup#waitlist-top" className="group" onClick={handleCTAClick}>
+            <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-6 text-white flex items-center text-lg shadow-lg shadow-propwiz-green/20 hover:shadow-propwiz-green/30 transition-all transform hover:scale-105 hover:-translate-y-1 duration-300 w-full sm:w-auto">
               <MessageSquare className="mr-2 h-5 w-5 group-hover:animate-pulse" />
               Text 'Search [city]' Now
               <div className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">Start Winning</div>

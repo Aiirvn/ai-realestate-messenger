@@ -33,15 +33,19 @@ const features = [
 
 const Features: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState<number | null>(null);
+
+  const handleExploreClick = () => {
+    console.log('Explore Features CTA clicked');
+  };
   
   return (
     <section id="features" className="py-16 bg-white">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12">
-          <div className="inline-block px-4 py-2 bg-propwiz-light rounded-full text-propwiz-green font-medium text-sm mb-4">
+          <div className="inline-block px-4 py-2 bg-propwiz-green/8 rounded-full text-propwiz-green font-medium text-sm mb-4">
             UNLOCK • BUILD • DELIVER
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">Deals & Loyalty on WhatsApp</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">Deals at Your Fingertips</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Professional-grade real estate tools that work entirely within WhatsApp's familiar interface
           </p>
@@ -57,7 +61,7 @@ const Features: React.FC = () => {
               onClick={() => setActiveFeature(activeFeature === index ? null : index)}
             >
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-propwiz-light rounded-full mr-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-propwiz-green/8 rounded-full mr-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-propwiz-dark">
@@ -86,7 +90,7 @@ const Features: React.FC = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Link to="/features">
+          <Link to="/features" onClick={handleExploreClick}>
             <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-3">
               <Zap className="mr-2 h-4 w-4" />
               Explore All Features

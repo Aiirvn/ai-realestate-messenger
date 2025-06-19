@@ -23,6 +23,11 @@ const Navbar: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleCTAClick = () => {
+    console.log('Navbar CTA clicked');
+    setIsMobileMenuOpen(false);
+  };
   
   return (
     <nav className={`py-4 px-6 sticky top-0 z-20 transition-all duration-300 ${
@@ -47,7 +52,7 @@ const Navbar: React.FC = () => {
         </div>
         
         <div className="flex items-center">
-          <Link to="/signup">
+          <Link to="/signup" onClick={handleCTAClick}>
             <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-6 text-white relative overflow-hidden group transition-all duration-300 transform hover:scale-105">
               <span className="relative z-10">Join Waitlist</span>
               <span className="absolute inset-0 w-full h-0 bg-white/20 group-hover:h-full transition-all duration-300"></span>
@@ -96,7 +101,7 @@ const Navbar: React.FC = () => {
           <Link
             to="/signup"
             className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={handleCTAClick}
           >
             Join Waitlist
           </Link>

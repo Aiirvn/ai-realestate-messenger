@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from "react-router-dom";
+import { MapPin, Home } from "lucide-react";
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -26,41 +27,23 @@ export const Logo: React.FC<LogoProps> = ({
   };
 
   const iconSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'
+    sm: 'h-4 w-4',
+    md: 'h-5 w-5',
+    lg: 'h-6 w-6'
   };
 
   return (
     <Link to="/" className={`flex items-center hover:opacity-80 transition-opacity duration-200 ${className}`}>
-      <div className={`${sizeClasses[size]} bg-gradient-to-br from-propwiz-green via-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 relative overflow-hidden border border-green-400/20`}>
-        {/* Sophisticated geometric pattern */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/30 to-transparent"></div>
-          <div className="absolute top-1 right-1 w-2 h-2 bg-white/40 rounded-full"></div>
-          <div className="absolute bottom-1 left-1 w-1 h-1 bg-white/30 rounded-full"></div>
-        </div>
+      <div className={`${sizeClasses[size]} bg-propwiz-green rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 relative`}>
+        {/* Location pin shape effect */}
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1 w-2 h-2 bg-propwiz-green rounded-full"></div>
         
-        {/* Modern RE monogram */}
-        <div className="relative z-10 flex items-center justify-center">
-          <div className={`${iconSizeClasses[size]} font-black text-white tracking-tighter flex items-center`}>
-            <span className="relative">
-              R
-              <span className="absolute -top-0.5 -right-0.5 w-1 h-1 bg-white rounded-full opacity-60"></span>
-            </span>
-            <span className="ml-0.5 relative">
-              E
-              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-0.5 bg-white/60"></span>
-            </span>
-          </div>
-        </div>
-        
-        {/* Subtle corner accent */}
-        <div className="absolute top-0 right-0 w-3 h-3 bg-gradient-to-bl from-white/20 to-transparent rounded-bl-lg"></div>
+        {/* House icon */}
+        <Home className={`${iconSizeClasses[size]} text-white`} />
       </div>
       {showText && (
-        <span className={`ml-3 font-bold ${textSizeClasses[size]} text-propwiz-dark tracking-tight`}>
-          RE<span className="text-propwiz-green font-extrabold">Dealr</span>
+        <span className={`ml-3 font-bold ${textSizeClasses[size]} text-slate-700 tracking-tight`}>
+          re<span className="text-propwiz-green font-extrabold">dealr</span>
         </span>
       )}
     </Link>
