@@ -24,8 +24,8 @@ const Hero: React.FC = () => {
           Deals Delivered to Your <span className="text-propwiz-green bg-gradient-to-r from-propwiz-green to-green-500 bg-clip-text text-transparent">WhatsApp</span>
         </h1>
         
-        {/* Enhanced subheadline with pop effect */}
-        <p className="text-lg sm:text-xl mb-6 text-gray-700 max-w-lg animate-fade-in font-semibold bg-gradient-to-r from-propwiz-green/20 to-transparent bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-propwiz-dark relative">
+        {/* Enhanced subheadline with smaller font size to fit one line */}
+        <p className="text-base sm:text-lg mb-6 text-gray-700 max-w-lg animate-fade-in font-semibold bg-gradient-to-r from-propwiz-green/20 to-transparent bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-propwiz-dark relative">
           <span className="relative z-10 bg-gradient-to-r from-propwiz-dark via-propwiz-green to-propwiz-dark bg-clip-text text-transparent animate-pulse">
             Find and Nurture Real Estate Wins with AI-Powered Ease.
           </span>
