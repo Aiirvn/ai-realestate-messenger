@@ -37,30 +37,30 @@ const Navbar: React.FC = () => {
         <Logo />
         
         <div className="hidden md:flex space-x-8">
-          <a href="#how-it-works" className="text-propwiz-dark hover:text-propwiz-green font-medium transition-all duration-300 flex items-center space-x-1 group">
+          <a href="#how-it-works" className="text-propwiz-dark hover:text-propwiz-green font-medium transition-all duration-300 relative group py-2">
             <span>How It Works</span>
-            <span className="h-0.5 w-0 bg-propwiz-green group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-propwiz-green group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#features" className="text-propwiz-dark hover:text-propwiz-green font-medium transition-all duration-300 flex items-center space-x-1 group">
+          <a href="#features" className="text-propwiz-dark hover:text-propwiz-green font-medium transition-all duration-300 relative group py-2">
             <span>Features</span>
-            <span className="h-0.5 w-0 bg-propwiz-green group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-propwiz-green group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#testimonials" className="text-propwiz-dark hover:text-propwiz-green font-medium transition-all duration-300 flex items-center space-x-1 group">
+          <a href="#testimonials" className="text-propwiz-dark hover:text-propwiz-green font-medium transition-all duration-300 relative group py-2">
             <span>Testimonials</span>
-            <span className="h-0.5 w-0 bg-propwiz-green group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-propwiz-green group-hover:w-full transition-all duration-300"></span>
           </a>
         </div>
         
         <div className="flex items-center">
           <Link to="/signup" onClick={handleCTAClick}>
-            <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-6 text-white relative overflow-hidden group transition-all duration-300 transform hover:scale-105">
+            <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white relative overflow-hidden group transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
               <span className="relative z-10">Join Waitlist</span>
               <span className="absolute inset-0 w-full h-0 bg-white/20 group-hover:h-full transition-all duration-300"></span>
             </Button>
           </Link>
           
           <button 
-            className="ml-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 md:hidden transition-colors duration-200"
+            className="ml-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 md:hidden transition-colors duration-200 touch-manipulation"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -79,28 +79,28 @@ const Navbar: React.FC = () => {
         <div className="p-4 space-y-3">
           <a 
             href="#how-it-works" 
-            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200"
+            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200 touch-manipulation"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             How It Works
           </a>
           <a 
             href="#features" 
-            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200"
+            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200 touch-manipulation"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Features
           </a>
           <a 
             href="#testimonials" 
-            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200"
+            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200 touch-manipulation"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Testimonials
           </a>
           <Link
             to="/signup"
-            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200"
+            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200 touch-manipulation"
             onClick={handleCTAClick}
           >
             Join Waitlist
