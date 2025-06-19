@@ -61,7 +61,7 @@ const WhatsAppDemo: React.FC = () => {
             <>
               <div className="mb-6">
                 <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
-                  <p className="text-sm text-gray-800">Hi there! I can help you find investment deals. Click the send button to search for "2 bed in Miami under $500K" 👇</p>
+                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Search Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
                   <p className="text-xs mt-2 text-gray-500">1:51 PM</p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ const WhatsAppDemo: React.FC = () => {
               {/* Banner */}
               <div className="bg-gray-800 text-white rounded-xl p-3 mb-6 relative">
                 <p className="text-sm text-center">
-                  Click send to search for properties 👇
+                  Click send to search for deals 👇
                 </p>
                 <div className="absolute -bottom-2 right-8 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-gray-800"></div>
               </div>
@@ -78,14 +78,14 @@ const WhatsAppDemo: React.FC = () => {
             <>
               <div className="mb-4">
                 <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
-                  <p className="text-sm text-gray-800">Hi there! I can help you find investment deals. Click the send button to search for "2 bed in Miami under $500K" 👇</p>
+                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Search Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
                   <p className="text-xs mt-2 text-gray-500">1:51 PM</p>
                 </div>
               </div>
               
               <div className="mb-4 flex justify-end">
                 <div className="max-w-sm p-3 rounded-2xl bg-propwiz-green text-white rounded-br-md">
-                  <p className="text-sm">Find me a 2 bed in Miami under $500K</p>
+                  <p className="text-sm">Search Miami</p>
                   <p className="text-xs mt-1 text-white/70">1:51 PM</p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ const WhatsAppDemo: React.FC = () => {
                       <div className="w-2 h-2 bg-propwiz-green rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
                       <div className="w-2 h-2 bg-propwiz-green rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
                     </div>
-                    <p className="text-sm text-gray-600">Searching for properties...</p>
+                    <p className="text-sm text-gray-600">Scouring the market for hot deals...</p>
                   </div>
                 </div>
               </div>
@@ -108,14 +108,14 @@ const WhatsAppDemo: React.FC = () => {
             <>
               <div className="mb-4">
                 <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
-                  <p className="text-sm text-gray-800">Hi there! I can help you find investment deals. Click the send button to search for "2 bed in Miami under $500K" 👇</p>
+                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Search Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
                   <p className="text-xs mt-2 text-gray-500">1:51 PM</p>
                 </div>
               </div>
               
               <div className="mb-4 flex justify-end">
                 <div className="max-w-sm p-3 rounded-2xl bg-propwiz-green text-white rounded-br-md">
-                  <p className="text-sm">Find me a 2 bed in Miami under $500K</p>
+                  <p className="text-sm">Search Miami</p>
                   <p className="text-xs mt-1 text-white/70">1:51 PM</p>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const WhatsAppDemo: React.FC = () => {
                           </div>
                         </div>
                         <p className="text-xs text-propwiz-green mt-2 flex items-center">
-                          ✓ Added to Google Sheet
+                          🔥 Hot deal delivered!
                         </p>
                       </div>
                     </div>
@@ -161,7 +161,7 @@ const WhatsAppDemo: React.FC = () => {
           <div className="flex items-center space-x-3">
             <input
               type="text"
-              value="Find me a 2 bed in Miami under $500K"
+              value="Search Miami"
               readOnly
               className="flex-1 border border-gray-300 rounded-full px-4 py-3 text-sm bg-white text-gray-500"
             />
@@ -174,7 +174,7 @@ const WhatsAppDemo: React.FC = () => {
             </button>
           </div>
           <p className="text-xs text-gray-500 mt-3 text-center">
-            Chat with our AI to find your ideal investment property
+            Find your next deal with a single text
           </p>
         </div>
       </div>

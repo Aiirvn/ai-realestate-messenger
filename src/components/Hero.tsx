@@ -11,18 +11,23 @@ const Hero: React.FC = () => {
         {/* Updated tagline badge */}
         <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm animate-fade-in">
           <MessageSquare className="w-4 h-4 mr-2 animate-pulse" />
-          Deals & Loyalty on WhatsApp
+          Deals at Your Fingertips
           <TrendingUp className="w-4 h-4 ml-2" />
         </div>
         
         {/* Updated headline */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-propwiz-dark leading-tight mb-6 animate-fade-in">
-          Unlock Deals, Build Loyalty—<span className="text-propwiz-green bg-gradient-to-r from-propwiz-green to-green-500 bg-clip-text text-transparent">All on WhatsApp</span>
+          Deals Delivered to Your <span className="text-propwiz-green bg-gradient-to-r from-propwiz-green to-green-500 bg-clip-text text-transparent">WhatsApp</span>
         </h1>
         
         {/* Enhanced subheadline */}
-        <p className="text-lg mb-8 text-gray-700 max-w-lg animate-fade-in">
-          Unlock off-market deals, build lifetime client loyalty, and automate follow-ups—all in WhatsApp's familiar interface. Professional results in minutes, not hours.
+        <p className="text-lg mb-6 text-gray-700 max-w-lg animate-fade-in font-medium">
+          Find and Nurture Real Estate Wins with AI-Powered Ease.
+        </p>
+        
+        {/* New body copy */}
+        <p className="text-base mb-8 text-gray-600 max-w-2xl animate-fade-in leading-relaxed">
+          Imagine scoring your next real estate deal with a single text! 🏠 redealr.com uses AI to scour the market and deliver hot opportunities straight to your WhatsApp. Search instantly, nurture leads with personalized deal alerts, and close faster—all from the app you already love. Perfect for investors, flippers, and first-timers craving speed and simplicity.
         </p>
         
         {/* Standardized CTA section */}
@@ -30,8 +35,8 @@ const Hero: React.FC = () => {
           <Link to="/signup#waitlist-top" className="group">
             <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-6 text-white flex items-center text-lg shadow-lg shadow-propwiz-green/20 hover:shadow-propwiz-green/30 transition-all transform hover:scale-105 hover:-translate-y-1 duration-300">
               <MessageSquare className="mr-2 h-5 w-5 group-hover:animate-pulse" />
-              Join the Waitlist
-              <div className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">Free Beta</div>
+              Text 'Search [city]' Now
+              <div className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">Start Winning</div>
             </Button>
           </Link>
         </div>
@@ -60,7 +65,7 @@ const Hero: React.FC = () => {
           </div>
           <div>
             <p className="text-sm text-gray-600">
-              <span className="font-semibold text-propwiz-green">150+</span> real estate professionals empowered
+              <span className="font-semibold text-propwiz-green">150+</span> real estate professionals winning deals
             </p>
             <div className="flex items-center mt-1">
               <div className="flex text-yellow-400">
