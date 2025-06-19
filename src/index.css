@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -84,9 +85,8 @@
     @apply bg-background text-foreground;
   }
 
-  /* Fix for mobile layout - ensure navbar is not blocked */
+  /* Mobile navbar fixes */
   @media (max-width: 768px) {
-    /* Remove any top padding that might cause issues */
     body {
       padding-top: 0;
     }
@@ -95,18 +95,30 @@
       min-height: 100vh;
     }
 
-    /* Ensure navbar has proper z-index and positioning */
+    /* Ensure navbar has proper positioning and spacing */
     nav {
       position: sticky !important;
       top: 0 !important;
       z-index: 50 !important;
+      margin-top: 0 !important;
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
     }
 
-    /* Hide any floating elements that might interfere - more comprehensive */
+    /* Hide the testimonials section header that's blocking the navbar */
+    #testimonials .text-center .text-3xl,
+    #testimonials .text-center .text-4xl,
+    section[id="testimonials"] .container .text-center h2,
+    section[id="testimonials"] h2 {
+      display: none !important;
+    }
+
+    /* Hide any other potential blockers */
     .floating-element,
     .testimonials-header,
-    [class*="testimonial"],
-    [id*="testimonial"],
+    [class*="testimonial"] h2,
+    [class*="testimonial"] .text-3xl,
+    [class*="testimonial"] .text-4xl,
     .section-header,
     .floating-header,
     .banner,
@@ -118,6 +130,11 @@
     *[style*="position: absolute"][style*="top: 0"],
     *[style*="position: fixed"][style*="top: 0"] {
       display: none !important;
+    }
+
+    /* Ensure mobile menu dropdown doesn't interfere */
+    .fixed.inset-x-0 {
+      top: 72px !important;
     }
   }
 
