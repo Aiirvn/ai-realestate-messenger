@@ -21,8 +21,8 @@ const SEOContent: React.FC = () => {
               </p>
               <div className="relative mx-auto max-w-2xl mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop"
-                  alt="redealr WhatsApp interface showing AI-delivered property deals and alerts"
+                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop"
+                  alt="AI-powered WhatsApp interface delivering real estate deals with modern technology integration"
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                   loading="lazy"
                 />
@@ -99,8 +99,8 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
-                    alt="AI Deal Finder - Automated tool for discovering hot real estate opportunities"
+                    src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=400&h=300&fit=crop"
+                    alt="AI Deal Finder - Advanced drone technology representing automated property discovery and market analysis"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"
                   />
@@ -113,8 +113,8 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
-                    alt="Lead Nurturing System - Automated client relationship management"
+                    src="https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=400&h=300&fit=crop"
+                    alt="Lead Nurturing System - Modern architectural design representing structured client relationship management"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"
                   />
@@ -127,8 +127,8 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1512318446102-9c704332afe6?w=400&h=300&fit=crop"
-                    alt="WhatsApp Integration - Seamless deal delivery and client communication"
+                    src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"
+                    alt="WhatsApp Integration - Clean modern building representing seamless communication architecture"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"
                   />
