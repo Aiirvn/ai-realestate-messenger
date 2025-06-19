@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageSquare, Search, FileSpreadsheet } from 'lucide-react';
+import { MessageSquare, Search, Send } from 'lucide-react';
 
 const steps = [
   {
@@ -14,9 +14,9 @@ const steps = [
     description: "Our AI instantly searches using proprietary metrics to find the best properties matching your criteria."
   },
   {
-    icon: <FileSpreadsheet className="h-10 w-10 text-propwiz-green" />,
-    title: "Auto-populate to Google Sheets",
-    description: "Listings are automatically organized in your Google Sheet for easy tracking and analysis."
+    icon: <Send className="h-10 w-10 text-propwiz-green" />,
+    title: "Send listings to clients",
+    description: "Share curated property listings directly with your clients through WhatsApp for faster engagement."
   }
 ];
 
