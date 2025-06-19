@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -5,12 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
+import { Logo } from "@/components/ui/logo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Building2, TrendingUp, ArrowLeft } from "lucide-react";
-import { createClient } from '@supabase/supabase-js'; // Import Supabase client
+import { ArrowLeft } from "lucide-react";
+import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client with your Project URL and Anon API key
 const supabase = createClient(
   'https://eeeqlbvndjcwkxuvqukm.supabase.co',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVlZXFsYnZuZGpjd2t4dXZxdWttIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyODAwMjgsImV4cCI6MjA2Mzg1NjAyOH0.3Wf2tnWQlZiopTIy9XteOB-9YuH8oGWY_Ibd8eLeyeA'
@@ -57,7 +58,7 @@ const Signup: React.FC = () => {
         setSubmitted(true);
         toast({
           title: 'Application Submitted!',
-          description: 'We’re reviewing your application and will be in touch soon.',
+          description: 'We're reviewing your application and will be in touch soon.',
         });
       }
     } catch (err) {
@@ -86,16 +87,9 @@ const Signup: React.FC = () => {
             <>
               <div className="max-w-2xl mx-auto mb-10">
                 <div className="flex justify-center mb-8">
-                  <div className="relative h-12 w-12">
-                    <div className="absolute inset-0 w-10 h-10 bg-propwiz-green rounded-sm flex items-center justify-center">
-                      <Building2 className="h-6 w-6 text-white" />
-                    </div>
-                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-propwiz-green rounded-full flex items-center justify-center">
-                      <TrendingUp className="h-4 w-4 text-white" />
-                    </div>
-                  </div>
+                  <Logo size="lg" />
                 </div>
-                <h1 className="text-3xl md:text-4xl font-bold text-center text-propwiz-dark mb-4">Join the REDealr Beta</h1>
+                <h1 className="text-3xl md:text-4xl font-bold text-center text-propwiz-dark mb-4">Join the redealr Beta</h1>
                 <p className="text-gray-600 text-center">Be among the first to use our AI-powered real estate deal finder</p>
               </div>
               
@@ -184,7 +178,7 @@ const Signup: React.FC = () => {
                   </Button>
                   
                   <p className="text-xs text-gray-500 text-center">
-                    By submitting, you agree to receive updates about PropWiz.ai
+                    By submitting, you agree to receive updates about redealr
                   </p>
                 </form>
               </div>
@@ -198,7 +192,7 @@ const Signup: React.FC = () => {
               </div>
               <h2 className="text-2xl font-bold text-propwiz-dark mb-4">Thank You!</h2>
               <p className="text-gray-600 mb-6">
-                Your application to join the REDealr beta has been submitted. Our team is reviewing your information and will be in touch shortly with next steps.
+                Your application to join the redealr beta has been submitted. Our team is reviewing your information and will be in touch shortly with next steps.
               </p>
               <Link to="/">
                 <Button className="bg-propwiz-green hover:bg-opacity-90 rounded-full text-white">

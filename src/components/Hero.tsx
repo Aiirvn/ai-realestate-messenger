@@ -1,12 +1,11 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { MessageSquare, TrendingUp, Users, Clock } from "lucide-react";
+import { MessageSquare, TrendingUp, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   const handleCTAClick = () => {
-    // Enhanced CTA tracking and functionality
     console.log('CTA clicked - redirecting to signup');
   };
 
@@ -40,8 +39,7 @@ const Hero: React.FC = () => {
           <Link to="/signup#waitlist-top" className="group" onClick={handleCTAClick}>
             <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-6 text-white flex items-center text-lg shadow-lg shadow-propwiz-green/20 hover:shadow-propwiz-green/30 transition-all transform hover:scale-105 hover:-translate-y-1 duration-300 w-full sm:w-auto">
               <MessageSquare className="mr-2 h-5 w-5 group-hover:animate-pulse" />
-              Text 'Search [city]' Now
-              <div className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">Start Winning</div>
+              Start Finding Deals Free
             </Button>
           </Link>
         </div>
@@ -78,7 +76,7 @@ const Hero: React.FC = () => {
                   <span key={i} className="text-xs">★</span>
                 ))}
               </div>
-              <span className="text-xs text-gray-500 ml-1">Join the WhatsApp community</span>
+              <span className="text-xs text-gray-500 ml-1">Join the redealr community</span>
             </div>
           </div>
         </div>

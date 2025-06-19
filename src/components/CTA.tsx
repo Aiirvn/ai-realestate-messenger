@@ -6,16 +6,13 @@ import { MessageSquare, Shield, Clock } from "lucide-react";
 
 const CTA: React.FC = () => {
   const handleCTAClick = () => {
-    // Enhanced CTA tracking
     console.log('CTA clicked - Join Waitlist');
-    // Additional analytics or tracking can be added here
   };
 
   return (
     <section className="py-20 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Updated tagline integration */}
           <div className="inline-block px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-propwiz-green font-medium text-sm mb-6 border border-propwiz-green/20 shadow-sm animate-fade-in">
             Deals at Your Fingertips
           </div>

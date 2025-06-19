@@ -43,7 +43,7 @@ const StreamlinedTestimonials: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-propwiz-dark mb-4">What Users Say</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Join the growing community of satisfied redealr users unlocking deals and building loyalty
+            Join the redealr community unlocking deals and building loyalty
           </p>
         </div>
         

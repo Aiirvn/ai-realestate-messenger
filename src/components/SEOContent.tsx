@@ -21,15 +21,15 @@ const SEOContent: React.FC = () => {
               </p>
               <div className="relative mx-auto max-w-2xl mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=400&fit=crop"
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=400&fit=crop"
                   alt="redealr WhatsApp interface showing AI-delivered property deals and alerts"
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                   loading="lazy"
                 />
               </div>
-              <Link to="/features">
+              <Link to="/signup">
                 <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-6 py-3">
-                  Explore Features
+                  Join Waitlist
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -72,12 +72,12 @@ const SEOContent: React.FC = () => {
                 </h3>
                 <p className="text-gray-700">
                   Yes! You can start finding and nurturing real estate deals completely free. 
-                  Text 'Search [city]' to get started and experience AI-powered deal discovery today.
+                  Text 'Find me a 2/2 in Miami' to get started and experience AI-powered deal discovery today.
                 </p>
               </div>
             </div>
             <div className="text-center mt-8">
-              <Link to="/trial">
+              <Link to="/signup">
                 <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-6 py-3">
                   Start Finding Deals
                   <MessageSquare className="ml-2 h-4 w-4" />
@@ -99,7 +99,7 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"
+                    src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop"
                     alt="AI Deal Finder - Automated tool for discovering hot real estate opportunities"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"
@@ -113,7 +113,7 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=300&fit=crop"
                     alt="Lead Nurturing System - Automated client relationship management"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"
@@ -127,7 +127,7 @@ const SEOContent: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop"
+                    src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop"
                     alt="WhatsApp Integration - Seamless deal delivery and client communication"
                     className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
                     loading="lazy"
@@ -139,17 +139,43 @@ const SEOContent: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="text-center mt-12">
-              <Link to="/features">
-                <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-3 text-lg">
-                  View All Features
-                  <TrendingUp className="ml-2 h-5 w-5" />
+          </div>
+        </div>
+      </section>
+
+      {/* Review Snippet Section */}
+      <section className="py-16 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-propwiz-dark mb-8">
+              What Real Estate Professionals Say
+            </h2>
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-xl text-gray-700 mb-6 italic">
+                "Saved me hours with its AI deal finder! Getting hot opportunities delivered straight to WhatsApp is a game-changer."
+              </blockquote>
+              <cite className="text-propwiz-green font-semibold">- Jane D., Real Estate Investor</cite>
+              <div className="mt-4 text-sm text-gray-600">
+                <span className="font-semibold">4.8/5</span> rating from <span className="font-semibold">100+</span> reviews
+              </div>
+            </div>
+            <div className="mt-8">
+              <Link to="/reviews">
+                <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-6 py-3">
+                  Read All Reviews
+                  <Users className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Review Snippet Section */}
       <section className="py-16 bg-gradient-to-br from-propwiz-green/8 to-propwiz-green/3">

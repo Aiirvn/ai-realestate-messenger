@@ -1,8 +1,6 @@
 
 import React, { useState } from 'react';
-import { MessageSquare, FileSpreadsheet, Clock, Users, Search, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
+import { MessageSquare, Clock, Users, Search } from 'lucide-react';
 
 const features = [
   {
@@ -33,10 +31,6 @@ const features = [
 
 const Features: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState<number | null>(null);
-
-  const handleExploreClick = () => {
-    console.log('Explore Features CTA clicked');
-  };
   
   return (
     <section id="features" className="py-16 bg-white">
@@ -87,15 +81,6 @@ const Features: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Link to="/features" onClick={handleExploreClick}>
-            <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-8 py-3">
-              <Zap className="mr-2 h-4 w-4" />
-              Explore All Features
-            </Button>
-          </Link>
         </div>
       </div>
     </section>

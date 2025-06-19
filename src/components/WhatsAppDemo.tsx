@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { MessageSquare, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { Logo } from "@/components/ui/logo";
 
 const WhatsAppDemo: React.FC = () => {
   const [showResponse, setShowResponse] = useState(false);
@@ -44,11 +45,9 @@ const WhatsAppDemo: React.FC = () => {
   return (
     <div className="max-w-lg mx-auto">
       <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
-        {/* WhatsApp Header */}
+        {/* WhatsApp Header with Logo */}
         <div className="bg-propwiz-green text-white p-4 flex items-center">
-          <div className="w-12 h-12 bg-propwiz-green rounded-xl flex items-center justify-center mr-3 border border-white/20">
-            <MessageSquare className="h-6 w-6 text-white" />
-          </div>
+          <Logo size="sm" showText={false} className="mr-3" />
           <div>
             <h3 className="font-semibold text-lg">redealr Assistant</h3>
             <p className="text-sm opacity-90">Online</p>
@@ -61,7 +60,7 @@ const WhatsAppDemo: React.FC = () => {
             <>
               <div className="mb-6">
                 <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
-                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Search Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
+                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Find me a 2/2 in Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
                   <p className="text-xs mt-2 text-gray-500">1:51 PM</p>
                 </div>
               </div>
@@ -78,14 +77,14 @@ const WhatsAppDemo: React.FC = () => {
             <>
               <div className="mb-4">
                 <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
-                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Search Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
+                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Find me a 2/2 in Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
                   <p className="text-xs mt-2 text-gray-500">1:51 PM</p>
                 </div>
               </div>
               
               <div className="mb-4 flex justify-end">
                 <div className="max-w-sm p-3 rounded-2xl bg-propwiz-green text-white rounded-br-md">
-                  <p className="text-sm">Search Miami</p>
+                  <p className="text-sm">Find me a 2/2 in Miami</p>
                   <p className="text-xs mt-1 text-white/70">1:51 PM</p>
                 </div>
               </div>
@@ -108,14 +107,14 @@ const WhatsAppDemo: React.FC = () => {
             <>
               <div className="mb-4">
                 <div className="max-w-sm p-4 rounded-2xl bg-white rounded-bl-md shadow-sm">
-                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Search Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
+                  <p className="text-sm text-gray-800">Ready to find your next deal? Text 'Find me a 2/2 in Miami' and I'll deliver hot opportunities straight to your WhatsApp! 🏠🔥</p>
                   <p className="text-xs mt-2 text-gray-500">1:51 PM</p>
                 </div>
               </div>
               
               <div className="mb-4 flex justify-end">
                 <div className="max-w-sm p-3 rounded-2xl bg-propwiz-green text-white rounded-br-md">
-                  <p className="text-sm">Search Miami</p>
+                  <p className="text-sm">Find me a 2/2 in Miami</p>
                   <p className="text-xs mt-1 text-white/70">1:51 PM</p>
                 </div>
               </div>
@@ -161,7 +160,7 @@ const WhatsAppDemo: React.FC = () => {
           <div className="flex items-center space-x-3">
             <input
               type="text"
-              value="Search Miami"
+              value="Find me a 2/2 in Miami"
               readOnly
               className="flex-1 border border-gray-300 rounded-full px-4 py-3 text-sm bg-white text-gray-500"
             />
