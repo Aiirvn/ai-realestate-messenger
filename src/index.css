@@ -85,6 +85,18 @@
     @apply bg-background text-foreground;
   }
 
+  /* Fix for Lovable badge blocking content on mobile */
+  @media (max-width: 768px) {
+    body {
+      padding-top: 50px;
+    }
+    
+    /* Adjust if the badge height is different */
+    #root {
+      min-height: calc(100vh - 50px);
+    }
+  }
+
   /* Smooth scrolling for anchor links */
   html {
     scroll-behavior: smooth;
