@@ -98,13 +98,6 @@ const Navbar: React.FC = () => {
           >
             Testimonials
           </a>
-          <Link
-            to="/signup"
-            className="block py-3 px-4 text-propwiz-dark hover:bg-propwiz-green/10 rounded-lg transition-colors duration-200 touch-manipulation"
-            onClick={handleCTAClick}
-          >
-            Join Waitlist
-          </Link>
         </div>
       </div>
     </nav>
