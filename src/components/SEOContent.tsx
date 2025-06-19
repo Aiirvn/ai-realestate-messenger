@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MessageSquare, Users, Star, ChevronRight } from "lucide-react";
+import { MessageSquare, Users, Star, ChevronRight, Bot, Target, Zap } from "lucide-react";
 
 const SEOContent: React.FC = () => {
   return (
@@ -20,12 +20,14 @@ const SEOContent: React.FC = () => {
                 and delivers personalized deal alerts directly to your WhatsApp for faster closing.
               </p>
               <div className="relative mx-auto max-w-2xl mb-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop"
-                  alt="AI-powered WhatsApp interface delivering real estate deals with modern technology integration"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg"
-                  loading="lazy"
-                />
+                <div className="w-full h-64 bg-gradient-to-br from-propwiz-green/10 to-propwiz-green/5 rounded-lg shadow-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="mx-auto w-24 h-24 bg-propwiz-green/10 rounded-full flex items-center justify-center mb-4">
+                      <MessageSquare className="h-12 w-12 text-propwiz-green" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-propwiz-dark">AI-Powered WhatsApp Integration</h3>
+                  </div>
+                </div>
               </div>
               <Link to="/signup">
                 <Button className="bg-propwiz-green hover:bg-green-600 rounded-full px-6 py-3">
@@ -98,12 +100,14 @@ const SEOContent: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center group">
                 <div className="relative mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=400&h=300&fit=crop"
-                    alt="AI Deal Finder - Advanced drone technology representing automated property discovery and market analysis"
-                    className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
-                    loading="lazy"
-                  />
+                  <div className="w-full h-48 bg-gradient-to-br from-propwiz-green/10 to-propwiz-green/5 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="mx-auto w-16 h-16 bg-propwiz-green/10 rounded-full flex items-center justify-center mb-3">
+                        <Bot className="h-8 w-8 text-propwiz-green" />
+                      </div>
+                      <span className="text-sm font-medium text-propwiz-dark">AI Deal Finder</span>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold text-propwiz-dark mb-3">AI Deal Finder</h3>
                 <p className="text-gray-700">
@@ -112,12 +116,14 @@ const SEOContent: React.FC = () => {
               </div>
               <div className="text-center group">
                 <div className="relative mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=400&h=300&fit=crop"
-                    alt="Lead Nurturing System - Modern architectural design representing structured client relationship management"
-                    className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
-                    loading="lazy"
-                  />
+                  <div className="w-full h-48 bg-gradient-to-br from-propwiz-green/10 to-propwiz-green/5 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="mx-auto w-16 h-16 bg-propwiz-green/10 rounded-full flex items-center justify-center mb-3">
+                        <Target className="h-8 w-8 text-propwiz-green" />
+                      </div>
+                      <span className="text-sm font-medium text-propwiz-dark">Lead Nurturing</span>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold text-propwiz-dark mb-3">Lead Nurturing System</h3>
                 <p className="text-gray-700">
@@ -126,12 +132,14 @@ const SEOContent: React.FC = () => {
               </div>
               <div className="text-center group">
                 <div className="relative mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"
-                    alt="WhatsApp Integration - Clean modern building representing seamless communication architecture"
-                    className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow"
-                    loading="lazy"
-                  />
+                  <div className="w-full h-48 bg-gradient-to-br from-propwiz-green/10 to-propwiz-green/5 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="mx-auto w-16 h-16 bg-propwiz-green/10 rounded-full flex items-center justify-center mb-3">
+                        <Zap className="h-8 w-8 text-propwiz-green" />
+                      </div>
+                      <span className="text-sm font-medium text-propwiz-dark">WhatsApp Integration</span>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold text-propwiz-dark mb-3">WhatsApp Integration</h3>
                 <p className="text-gray-700">
