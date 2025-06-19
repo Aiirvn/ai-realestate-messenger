@@ -58,7 +58,7 @@ const Signup: React.FC = () => {
         setSubmitted(true);
         toast({
           title: 'Application Submitted!',
-          description: 'We're reviewing your application and will be in touch soon.',
+          description: 'We are reviewing your application and will be in touch soon.',
         });
       }
     } catch (err) {
